@@ -1,0 +1,141 @@
+body{
+    background-color: #142857;
+}
+.nav{
+    border: 1px solid #28571457;
+    border-radius: 5px;
+    background-color: #285714;
+    overflow: hidden;
+}
+ul{
+    box-shadow: 20px 40px 40px #00000033;
+    border-radius: 5px;
+    box-shadow: 5px 15px 15px #00000022;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+    border-radius: 3px;
+    background-color: #14285728;
+    transition: 0.3s;
+    box-shadow: 10px 20px 20px #00000033;
+    font: 600 20px 'Consolas';
+    color: #28145757;
+    overflow: hidden;
+}
+li a{
+    position: relative;
+    padding: 13px 13px;
+    text-decoration: none;
+    justify-content: space-between;
+}
+li a:hover{
+    animation: navTexBigger 0.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid #baddad;
+}
+li a:not(:hover){
+    animation: navTexSmaller 0.5s;
+    animation-fill-mode: forwards;
+}
+li a:active{
+    box-shadow: inset 10px 10px 20px #00000030,
+                inset -10px -10px 20px #00000036;
+}
+.viewbox{
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+}
+.scrollbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+    transition: 0.15s ease;
+}
+.skya_title{
+    font-family: "SKYA_Title-Pixel_demo";
+    text-align: left;
+    font-size: 6rem;
+    /*padding-left: 2%;*/
+    animation: SKYA_title_loaded 0.5s forwards, typing 2s steps(15,end) forwards, caret_blink 0.8s infinite;
+    /*make it in type-style */
+    overflow: hidden;
+    border-right: 10px solid #142857;
+}
+.skya_title:hover{
+    animation: SKYA_title_hover 0.5s forwards;
+}
+.skya_title:not(:hover){
+    animation: SKYA_title_shin 0.5s forwards;
+}
+.testimg1{
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container:hover{
+    animation: wave_infin, forwards;
+}
+@font-face {
+    font-family: "SKYA_Title-Pixel_demo";
+    src: url("/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
+}
+@keyframes navTexBigger {
+    0%{
+        font-size: 20px;
+        color: #281457;
+        border-color: #2bad1a;
+    }
+    25%{
+        color: #dad;
+    }
+    100%{
+        font-size: 25px;
+        color: #571428;
+        background-color: #2bad1a;
+    }
+}
+@keyframes navTexSmaller {
+    0%{
+        font-size: 25px;
+        color: #571428;
+        border: 1px solid #2bad1a;
+    }
+    100%{
+        font-size: 20px;
+        color: #281457;
+    }
+}
+@keyframes SKYA_title_hover {
+    0%{
+        color: #571428;
+        transform: translateX(2%);
+    }
+    100%{
+        background-color: #00000036;
+        color: #2bad1a;
+        box-shadow: -1px -1px 50px #96df8d;
+        text-shadow: 0px 0px 25px #94ca8c;
+    }
+}
+@keyframes SKYA_title_shin {
+    0%,3%,15%,18%,30%,40%,60%{
+        color: #285714;
+    }
+    5%,10%,20%,25%,55%,65%,100%{
+        box-shadow: -1px -1px 15px #96df8d;
+        color: #2bad1a;
+    }
+}
