@@ -1,0 +1,1 @@
+const navtab = document.querySelectorAll('.')
