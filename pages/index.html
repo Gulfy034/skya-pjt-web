@@ -6,39 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WelCOMe-TO-[SKYA_PROJECT]-offical-Website !</title>
     <link rel="stylesheet" href="/css/index.css">
-    <style>
-        .container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-            align-items: center;
-            border-radius: 2px;
-            border: 1px solid #FFFFFF;
-            color: #FFFFFF;
-            /* Move it to centre-part in order to silde */
-            animation: slide_bx 0.75s, forwards;
-            scroll-snap-type: y mandatory;
-            overflow: scroll;
-            scroll-snap-align: start;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/skya_title.css">
+    <link rel="stylesheet" href="/css/skya_nav.css">
     </body>
 </head>
 
 <body>
-    <script>
-        const bgTextgroup = document.querySelector('.bg_rollin');
-        for (let i = 1; i < 20; i++) {
-            const bg_rollin = document.createElement('div');
-            bg_rollin.className = 'rollinText'
-            bgTextgroup.appendChild(bg_rollin);
-        }
-        function addrollinText(rollinText){
-            const rollinText = document.getElementsByClassName(rollinText);
-            
-        }
-    </script>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="/script/glitch_eff_gsap.js"></script>
     <div class="Title">
         <header class="nav">
             <nav>
@@ -49,32 +24,35 @@
                     <li><a href="contect.html">Contect-@</a></li>
                     <div class="nav_slider"></div>
                 </ul>
-                <button>Language</button>
+                <button class="langSet" id="langSet">Language</button>
             </nav>
-
         </header>
+
         <div class="skya_title">
-            <p>SKYA_PROJECT</p>
+            <p>::SKYA_PROJECT::</p>
+        </div>
+        <div class="inbox_roll">
+            suno-koncated-yet-another project
         </div>
         <div class="container">
             <p>test of the tester.</p>
         </div>
-        <!--    <section>
-                <div class="bg_rollin">
-                    <div>
-                        <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
-                    </div>
-                    <div>
-                        <p>SKYA_PROJECT offical-Website SKYA_PROJECT offical-Website</p>
-                    </div>
-                    <div">
-                        <p>now demo unavaliable.now demo unavaliable.</p>
-                    </div>
+        <section>
+            <div class="bg_rollin">
+                <div>
+                    <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
                 </div>
-            </section>-->
+                <div>
+                    <p>SKYA_PROJECT offical-Website SKYA_PROJECT offical-Website</p>
+                </div>
+                <div>
+                    <p>now demo unavaliable.now demo unavaliable.</p>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
-<!--using three.js & typed.js !!!-->
+<!--using pixi.js & three.js & typed.js & gsap !!!-->
 <footer>
     <div>
 
