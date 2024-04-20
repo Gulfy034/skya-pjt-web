@@ -119,7 +119,13 @@ li a:active {
         color: #571428;
         border-color: #2bad1a;
     }
-
+    15%,25%,35%,65%{
+        color: #142857;
+    }
+    20%,30%,45%,75%{
+        color: #285714;
+        border-color: #2bad1a;
+    }
     100% {
         color: #281457;
     }
