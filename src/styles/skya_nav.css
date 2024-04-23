@@ -1,0 +1,221 @@
+/*nav IFSELF style*/
+nav {
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #285714;
+    border-collapse: collapse;
+    padding: 1px 1px;
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: row;
+}
+
+/*nav UPPER elements part style*/
+
+ul {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+}
+
+.firstul {
+    box-shadow: 20px 40px 40px #00000033;
+    border-radius: 5px;
+}
+
+.secondul {
+    box-shadow: 10px 20px 20px #00000033;
+}
+
+.firstul li {
+    list-style: none;
+    background-color: #14285728;
+    box-shadow: 10px 20px 20px #00000033;
+    font: 600 20px 'Consolas';
+    color: #28145757;
+    min-width: 115.5px;
+}
+
+.firstul li a {
+    border-radius: 3px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/*nav UPPER status*/
+
+.firstul li a:hover {
+    animation: navTex1_Inhov 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.firstul li a:not(:hover) {
+    animation: navTex1_Outhov 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.firstul li a:active {
+    box-shadow: inset 5px 5px 5px #00000030,
+        inset -5px -5px 5px #00000036;
+}
+
+/*nav ITSELF style status*/
+
+nav:hover {
+    animation: navborder_ani1 0.35s forwards;
+}
+
+nav:not(:hover) {
+    animation: navborder_ani2 0.5s backwards;
+}
+
+.nav_slider {
+    background-color: #2bad1a;
+}
+
+/*nav BUTTOM part*/
+
+button {
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+}
+
+.langSet,
+.testPg,
+.errPg {
+    color: #2bad1a;
+    background-color: #281457;
+    border: 1px solid;
+}
+
+.testPg a,
+.errPg a {
+    color: #2bad1a;
+    background-color: #281457;
+    border: none;
+}
+
+/*nav BUTTOM part status*/
+
+.langSet:hover,
+.testPg:hover,
+.errPg:hover {
+    animation: navTex2_Inhov 0.35s forwards;
+}
+
+.langSet:after,
+.testPg:after,
+.errPg:after {
+    text-decoration: line-through;
+}
+
+/*animations Part*/
+
+@keyframes navPhoneResize {
+    0% {
+        font-size: 100%;
+    }
+
+    100% {
+        font-size: 3px;
+    }
+}
+
+@keyframes navTex1_Inhov {
+    0% {
+        color: #281457;
+        border-color: #2bad1a;
+    }
+
+    25% {
+        color: #dad;
+    }
+
+    100% {
+        color: #571428;
+        background-color: #2bad1a;
+    }
+}
+
+@keyframes navTex1_Outhov {
+    0% {
+        color: #571428;
+        border-color: #2bad1a;
+    }
+
+    15%,
+    25%,
+    35%,
+    65% {
+        color: #142857;
+        border-color: #285714;
+    }
+
+    20%,
+    30%,
+    45%,
+    75% {
+        color: #285714;
+        border-color: #2bad1a;
+    }
+
+    100% {
+        color: #281457;
+    }
+}
+
+/*nav BUTTOM status ani*/
+
+@keyframes navTex2_Inhov {
+    0% {
+        border-color: #2bad1a;
+        color: #2bad1a;
+    }
+
+    15%,
+    25%,
+    35%,
+    65% {
+        border-color: #285714;
+    }
+
+    20%,
+    30%,
+    45%,
+    75% {
+        border-color: #2bad1a;
+    }
+
+    100% {
+        border-color: #285714;
+    }
+}
+
+/*nav ITSELF status ani*/
+
+@keyframes navborder_ani1 {
+    0% {
+        border-color: #142857;
+    }
+
+    100% {
+        border-color: #2bad1a;
+    }
+}
+
+@keyframes navborder_ani2 {
+    0% {
+        border-color: #2bad1a;
+    }
+
+    100% {
+        border-color: #142857;
+    }
+}

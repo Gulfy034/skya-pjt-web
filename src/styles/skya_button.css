@@ -1,0 +1,101 @@
+.skya_button_one {
+    color: #2bad1a;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #13131313;
+    border: 2px solid;
+    border-width: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 4px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.skya_button_one a{
+    text-decoration: none;
+    color: #2bad1a;
+}
+
+.skya_button_one:hover{
+    animation: btnOne_inHover 0.5s forwards;
+}
+
+.skya_button_one:not(:hover){
+    animation: btnOne_outHover 0.4s;
+}
+
+@font-face {
+    font-family: "SKYA_Title-Pixel_demo";
+    src: url("src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
+    src: url("src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
+    src: url("src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
+}
+
+/*animation below*/
+
+@keyframes btnOne_inHover {
+    0%{
+        font-size: 20px;
+    }
+    3%,
+    15%,
+    18%,
+    30%,
+    40%,
+    60% {
+        color: #285714;
+    }
+
+    5%,
+    10%,
+    20%,
+    25%,
+    55%,
+    65% {
+        color: #2bad1a;
+        
+    }
+    50%{
+        font-size: 21px;
+        color: #4fed3a;
+    }
+    100%{
+        font-size: 23px;
+        font-family: "SKYA_Title-Pixel_demo";
+    }
+}
+
+@keyframes btnOne_outHover {
+    0%{
+        font-size: 23px;
+        color: #4fed3a;
+    }
+    3%,
+    15%,
+    18%,
+    30%,
+    40%,
+    60% {
+        color: #285714;
+    }
+
+    5%,
+    10%,
+    20%,
+    25%,
+    55%,
+    65% {
+        color: #2bad1a;
+    }
+    50%{
+        font-size: 21px;
+    }
+    100%{
+        font-size: 20px;
+        color: #2bad1a;
+        font-family: "SKYA_Title-Pixel_demo";
+    }
+}

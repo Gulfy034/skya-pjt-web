@@ -5,18 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh-hO 404!</title>
-    <link rel="stylesheet" href="src/css/skya_button.css">
-    <link rel="stylesheet" href="src/css/skya_title.css">
+    <link rel="shortcut icon" href="/src/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/skya_button.css">
+    <link rel="stylesheet" href="/src/styles/skya_title.css">
     <style lang="less" scoped>
-        * {
+        body {
+            background: radial-gradient(ellipse at top, #285714 0%, #040807 100% );
             color-scheme: light dark;
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-areas:
+                "header"
+                "content"
+                "footer";
         }
 
-        main {
-            display: grid;
+        header {
+            grid-area: header;
             row-gap: 40px;
             align-content: center;
-            height: 100vh;
         }
 
         .title {
@@ -26,9 +34,7 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
         }
-        .skya_title{
-            font-family: 'SKYA_Title-pixel_demo';
-        }
+
         span {
             text-align: left;
             font: 600 16px 'Consolas';
@@ -36,46 +42,48 @@
             font-family: 'SKYA_Title-pixel_demo';
         }
 
-        p {
+        main {
+            grid-area: content;
+        }
+
+        .output {
             font-family: 'Consolas';
         }
 
         footer {
-            margin-top: calc(100vh - 45%);
+            grid-area: footer;
+            text-align: center;
         }
 
         .auguroz_footer {
             font-family: 'Consolas';
-            display: flex;
+            text-align: center;
             justify-content: center;
-            align-items: end;
-            align-self: flex-end;
         }
     </style>
 </head>
 
 <body>
-    <script>
-        export default {
-            name :'On-hO 404!'
-        }
-    </script>
-        <div id="main">
-            <h1 class="title">~ Ey! Nothing here! ~</h1>
-            <div class="skya_title">
-                <p>::SKYA_PR0JECT::</p>
-            </div>
-            <span>output:</span>
-            <p><span>~#</span> i can't found any pages matches you have typed! <br /></p>
-            <button class="skya_button">
-                > Take me to the main page !
-            </button>
+    <script type="javascript/typescript" src="/src/tsx_script/typed_eff.js"></script>
+
+    <header>
+        <h1 class="title">~ Ey! Nothing here! ~</h1>
+        <div class="skya_title">
+            <p class="skya_title_text">SKYA_PROJECT</p>
         </div>
+    </header>
+    <main>
+        <span>output:</span>
+        <p class="output"><span>~#</span> i can't found any pages matches you have typed! <br /></p>
+        <button class="skya_button_one">
+            <a href="/index.html">Take me to the main page !</a>
+        </button>
+    </main>
+    <footer>
+        <div class="auguroz_footer">
+            <span>~#</span> here is nothing but there is another way to access this page!
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="auguroz_footer">
-        <span>~#</span> here is nothing but there is another way to access this page!
-    </div>
-</footer>
 
 </html>

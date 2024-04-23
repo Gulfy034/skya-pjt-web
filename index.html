@@ -7,65 +7,85 @@
     <meta name="description" content="SKYA_PROJECT of the game offical-Website, now it is building.">
     <title>WelCOMe-TO-[SKYA_PROJECT]-offical-Website !</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="shortcut icon" href="src/imgs/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/skya_title.css">
-    <link rel="stylesheet" href="src/css/skya_nav.css">
-    <link rel="stylesheet" href="src/css/skya_introdci.css">
+    <link rel="shortcut icon" href="/src/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/skya_nav.css">
+    <link rel="stylesheet" href="/src/styles/skya_title.css">
+    <link rel="stylesheet" href="/src/styles/skya_introdci.css">
     </body>
 </head>
 
 <body>
-    <script src="https://pixijs.download/release/pixi.js"></script>
-    <script src="src/js_script/glitch_eff_gsap.js"></script>
-    <script src="src/js_script/bgroller_eff_gsap.js"></script>
-    <div class="Title">
-        <header class="nav">
+    <script type="module" src="/src/js_script/glitch_eff_gsap.js"></script>
+    <script type="module" src="/src/js_script/bgroller_eff_gsap.js"></script>
+    <script type="module" src="/src/js_script/typed_eff.js"></script>
+    <!--<script type="module" src="/src/tsx_script/typed_react_eff.tsx"></script>-->
+
+    <div class="layout">
+        <header>
             <nav>
-                <ul>
-                    <li><a href="index.html">MainPage-#</a></li>
+                <ul class="firstul">
+                    <li><a href="/index.html">MainPage-#</a></li>
                     <li><a href="/etc_pages/download.html">Download-*</a></li>
                     <li><a href="/etc_pages/about.html">About-?</a></li>
                     <li><a href="/etc_pages/contect.html">Contect-@</a></li>
-                    <div class="nav_slider"></div>
+                    <div class="nav_slider">
+                        <img src="/src/imgs/trigon_pixel_32x32.svg" alt="trigon nav slider">
+                    </div>
                 </ul>
-                <button class="langSet" id="langSet">Language</button>
+                <div class="secondul">
+                    <button class="langSet" id="langSet">Language</button>
+                    <button class="testPg" id="TextPg"><a href="/etc_pages/test.html">Go-to test-page</a></button>
+                    <button class="errPg" id="ErrPg"><a href="/404.html">Go-to 404-page</a></button>
+                </div>
             </nav>
+
+            <div class="skya_title" onclick="skyaTiTyped()">
+                <p class="skya_title_text">SKYA_PROJECT</p>
+            </div>
+            <div class="inbox_roll">
+                suno-koncated-yet-another project
+            </div>
+
         </header>
 
-        <div class="skya_title">
-            <p>::SKYA_PROJECT::</p>
-        </div>
-        <div class="inbox_roll">
-            suno-koncated-yet-another project
-        </div>
-        <div class="container">
-            <p>test of the tester.</p>
-            <div class="">
-                <p>12343</p>
+        <main>
+            <div class="container">
+                <div>
+                    <h3 class="cont_title_one"></h3>
+                    <hr class="hr_conf" attr-con="divi-line">
+                </div>
+                <div>
+                    <p>142857142857142857</p>
+                    <p>asdfkjnsfneianwfnnerg</p>
+                    <p>sdjnwnfifnwen</p>
+                </div>
             </div>
-        </div>
 
-        <section>
-            <div class="bg_rollin">
-                <div>
-                    <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
+            <section>
+                <div class="bg_rollin">
+                    <div>
+                        <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
+                    </div>
+                    <div>
+                        <p>SKYA_PROJECT offical-Website SKYA_PROJECT offical-Website</p>
+                    </div>
+                    <div>
+                        <p>now demo unavaliable.now demo unavaliable.</p>
+                    </div>
                 </div>
-                <div>
-                    <p>SKYA_PROJECT offical-Website SKYA_PROJECT offical-Website</p>
-                </div>
-                <div>
-                    <p>now demo unavaliable.now demo unavaliable.</p>
-                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="mainfoot">
+                <p>this is the footer</p>
             </div>
-        </section>
+        </footer>
+
     </div>
+    <!--using pixi.js & three.js & typed.js & gsap !!!-->
 </body>
-<!--using pixi.js & three.js & typed.js & gsap !!!-->
-<footer>
-    <div>
-
-    </div>
-</footer>
 
 </html>
