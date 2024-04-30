@@ -28,13 +28,6 @@
     animation: btnOne_outHover 0.4s;
 }
 
-@font-face {
-    font-family: "SKYA_Title-Pixel_demo";
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
-}
-
 /*animation below*/
 
 @keyframes btnOne_inHover {

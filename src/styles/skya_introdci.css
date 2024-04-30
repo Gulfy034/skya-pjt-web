@@ -30,6 +30,7 @@
     padding: 1em 0;
     border: 1px dashed;
     position: relative;
+    font-family: "Home-Sweet-Home-normal";
 }
 
 .hr_conf::before {
@@ -49,7 +50,7 @@ span {
     border-collapse: collapse;
     border: 0.1rem solid;
     border-radius: 0.5rem;
-    font-family: "Consolas";
+    font-family: "Consolas","Home-Sweet-Home-normal";
     font-weight: 200;
     cursor: pointer;
 }

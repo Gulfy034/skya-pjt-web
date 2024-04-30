@@ -11,10 +11,8 @@
       "@/*": ["./src/*"],
       "@css/": ["./src/styles/*"],
       "@scss/": ["./src/styles_scss/*"],
-      "@font/": ["./src/font/*"],
       "@jsx/": ["./src/jsx_script/*"],
       "@tsx/": ["./src/tsx_script/*"],
-      "@img/": ["./src/imgs/*"],
     },
   },
   "include": ["vite.config.ts"]

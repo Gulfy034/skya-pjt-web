@@ -1,12 +1,12 @@
 /* full scrollbar */
 ::-webkit-scrollbar{
-    width: 12px;
+    width: 6px;
 }
 
 /* scrollbar thumb */
 ::-webkit-scrollbar-thumb{
     background-color: #285714ca;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -15,7 +15,9 @@
 
 /* scrollbar top/bottom button */
 ::-webkit-scrollbar-button{
-    background-image: url('/src/imgs/trigon_pixel_32x32.svg');
+    background-image: url('/imgs/trigon_pixel_32x32.svg');
+    overflow: hidden;
+    display: block;
 }
 
 /* scrollbar ex-part */

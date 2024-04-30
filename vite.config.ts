@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import * as path from 'path';
+import path, { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        nested: resolve(__dirname, '404.html')
+      }
+    }
+  },
   resolve: {
     alias: [
       {find: '@',
@@ -19,14 +27,8 @@ export default defineConfig({
       {find: '@jsx',
         replacement: path.resolve(__dirname, 'src/jsx_script')
       },
-      {find: '@font',
-        replacement: path.resolve(__dirname, 'src/font')
-      },
       {find: '@tsx_etc',
         replacement: path.resolve(__dirname, 'src/tsx_script')
-      },
-      {find: '@img',
-        replacement: path.resolve(__dirname, 'src/imgs')
       }
     ],
   },

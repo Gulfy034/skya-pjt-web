@@ -39,13 +39,6 @@
     animation: SKYA_title_outHover 0.5s forwards;
 }
 
-@font-face {
-    font-family: "SKYA_Title-Pixel_demo";
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
-}
-
 @keyframes SKYA_title_inHover {
     0% {
         color: #571428;

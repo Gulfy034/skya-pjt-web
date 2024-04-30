@@ -46,9 +46,18 @@ footer {
 
 @font-face {
     font-family: "SKYA_Title-Pixel_demo";
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
+    src: url("/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
+}
+@font-face {
+    font-family: "Home-Sweet-Home-normal";
+    src: url("/font/home-sweet-home.regular.otf") format('truetype');
+}
+
+@font-face {
+    font-family: "Home-Sweet-Home-outline";
+    src: url("/font/home-sweet-home.outline-regular.otf") format('truetype');
 }
 
 @keyframes scroolAppear {
