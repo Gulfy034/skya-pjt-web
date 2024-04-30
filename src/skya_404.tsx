@@ -1,6 +1,6 @@
 import './styles_scss/'
 
-function errPageInsert() {
+function errinsert() {
 
   return (
     <>
@@ -11,4 +11,4 @@ function errPageInsert() {
   )
 }
 
-export default errPageInsert
+export default errinsert
