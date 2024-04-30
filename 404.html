@@ -6,31 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh-hO 404!</title>
     <link rel="shortcut icon" href="/src/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/skya_scroolbar.css">
     <link rel="stylesheet" href="/src/styles/skya_button.css">
     <link rel="stylesheet" href="/src/styles/skya_title.css">
     <style lang="less" scoped>
         body {
-            background: radial-gradient(ellipse at top, #285714 0%, #040807 100% );
-            color-scheme: light dark;
+            background: radial-gradient(ellipse at top,
+                    #285714 0%, #040807 100%);
+            color-scheme: dark;
+            scroll-behavior: smooth;
             display: grid;
+            object-fit: contain;
             height: 100vh;
             width: 100vw;
+            white-space: nowrap;
+            text-wrap: wrap;
+            overflow-x: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            color: #989898;
             grid-template-areas:
                 "header"
                 "content"
                 "footer";
         }
 
+        @media screen and (max-width: 535px) {
+            * {
+                max-width: calc(100vw - 1em);
+            }
+        }
+
         header {
             grid-area: header;
             row-gap: 40px;
-            align-content: center;
+            max-width: 100vw;
+            color: #bababa;
         }
 
         .title {
             text-align: center;
+            max-width: 100vw;
             font-size: 3rem;
-            margin: 12px 0;
+            margin-top: 3rem;
+            font-size: clamp(2.5rem, 2vw, 3rem);
+            margin-left: auto;
+            margin-right: auto;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
         }
@@ -53,6 +74,7 @@
         footer {
             grid-area: footer;
             text-align: center;
+            position: relative;
         }
 
         .auguroz_footer {
@@ -64,26 +86,44 @@
 </head>
 
 <body>
-    <script type="javascript/typescript" src="/src/tsx_script/typed_eff.js"></script>
+    <svg style="display: none">
+        <defs>
+            <filter id="glitch1" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox"
+                primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+                <feTurbulence type="turbulence" baseFrequency="0.01 0.1" numOctaves="2" seed="2" stitchTiles="stitch"
+                    x="0%" y="0%" width="100%" height="100%" result="turbulence1" />
 
-    <header>
-        <h1 class="title">~ Ey! Nothing here! ~</h1>
-        <div class="skya_title">
-            <p class="skya_title_text">SKYA_PROJECT</p>
-        </div>
-    </header>
-    <main>
-        <span>output:</span>
-        <p class="output"><span>~#</span> i can't found any pages matches you have typed! <br /></p>
-        <button class="skya_button_one">
-            <a href="/index.html">Take me to the main page !</a>
-        </button>
-    </main>
-    <footer>
-        <div class="auguroz_footer">
-            <span>~#</span> here is nothing but there is another way to access this page!
-        </div>
-    </footer>
+                <feDisplacementMap in="SourceGraphic" in2="turbulence1" scale="20" xChannelSelector="R"
+                    yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" result="displacementMap" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script type="module" src="/src/jsx_script/typed_404_eff.jsx"></script>
+    <script type="module" src="/src/jsx_script/glitch_eff_gsap.jsx"></script>
+    <script type="module" src="/src/jsx_script/smooth.jsx"></script>
+
+        <header>
+            <h1 class="title">~ Ey! Nothing here! ~</h1>
+            <div class="skya_title">
+                <p class="errTitleText">SKYA_PROJECT</p>
+            </div>
+        </header>
+        
+        <main>
+            <span>output:</span>
+            <p class="output"><span>~#</span> i can't found any pages matches you have typed! <br /></p>
+            <button class="skya_button_one">
+                <a href="/index.html">Take me to the main page !</a>
+            </button>
+        </main>
+        
+        <footer>
+            <div class="auguroz_footer">
+                <span>~#</span> here is nothing but there is another way to access this page!
+            </div>
+        </footer>
+
 </body>
 
 </html>

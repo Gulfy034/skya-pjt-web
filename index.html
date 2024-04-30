@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="SKYA_PROJECT of the game offical-Website, now it is building.">
     <title>WelCOMe-TO-[SKYA_PROJECT]-offical-Website !</title>
     <link rel="manifest" href="manifest.json">
@@ -11,40 +11,44 @@
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/skya_nav.css">
     <link rel="stylesheet" href="/src/styles/skya_title.css">
+    <link rel="stylesheet" href="/src/styles/skya_scroolbar.css">
     <link rel="stylesheet" href="/src/styles/skya_introdci.css">
+    <link rel="stylesheet" href="/src/styles_scss/skya_ani1.scss">
     </body>
 </head>
 
 <body>
-    <script type="module" src="/src/js_script/glitch_eff_gsap.js"></script>
-    <script type="module" src="/src/js_script/bgroller_eff_gsap.js"></script>
-    <script type="module" src="/src/js_script/typed_eff.js"></script>
-    <!--<script type="module" src="/src/tsx_script/typed_react_eff.tsx"></script>-->
 
-    <div class="layout">
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/jsx_script/languageSet.jsx"></script>
+    <script type="module" src="/src/jsx_script/glitch_eff_gsap.jsx"></script>
+    <script type="module" src="/src/jsx_script/bgroller_eff_gsap.jsx"></script>
+    <script type="module" src="/src/jsx_script/typed_eff.jsx"></script>
+    <script type="module" src="/src/jsx_script/smooth.jsx"></script>
+
+    <div class="layout" id="layout">
         <header>
             <nav>
                 <ul class="firstul">
-                    <li><a href="/index.html">MainPage-#</a></li>
-                    <li><a href="/etc_pages/download.html">Download-*</a></li>
-                    <li><a href="/etc_pages/about.html">About-?</a></li>
-                    <li><a href="/etc_pages/contect.html">Contect-@</a></li>
+                    <li><a href="#">Home-#</a></li>
+                    <li><a href="#Download">Download-*</a></li>
+                    <li><a href="#About">About-?</a></li>
+                    <li><a href="#Contect">Contect-@</a></li>
                     <div class="nav_slider">
                         <img src="/src/imgs/trigon_pixel_32x32.svg" alt="trigon nav slider">
                     </div>
                 </ul>
                 <div class="secondul">
                     <button class="langSet" id="langSet">Language</button>
-                    <button class="testPg" id="TextPg"><a href="/etc_pages/test.html">Go-to test-page</a></button>
                     <button class="errPg" id="ErrPg"><a href="/404.html">Go-to 404-page</a></button>
                 </div>
             </nav>
 
-            <div class="skya_title">
+            <div class="skya_title" onclick="bgroll()">
                 <p class="skya_title_text">SKYA_PROJECT</p>
             </div>
             <div class="inbox_roll">
-                suno-koncated-yet-another project
+                suno-koncated-yet-another project.
             </div>
 
         </header>
@@ -52,18 +56,35 @@
         <main>
             <div class="container">
                 <div>
+                    <hr class="hr_conf" attr-con="Title-message">
                     <h3 class="cont_title_one"></h3>
-                    <hr class="hr_conf" attr-con="divi-line">
                 </div>
+
+                <section>
+
+                </section>
+
                 <div>
-                    <p>142857142857142857</p>
-                    <p>asdfkjnsfneianwfnnerg</p>
-                    <p>sdjnwnfifnwen</p>
+                    <hr class="hr_conf" attr-con="Tips!">
+                    <h3 class="cont_title_two"></h3>
+                </div>
+
+                <section>
+
+                </section>
+
+                <appInsert>
+                <!--here is the react componet inserted-->
+                </appInsert>
+                
+                <div>
+                    <hr class="hr_conf" attr-con="divi-line">
+                    <h3 class="cont_title_three"></h3>
                 </div>
             </div>
 
-            <section>
-                <div class="bg_rollin">
+            <section class="bg_rollin">
+                <div>
                     <div>
                         <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
                     </div>

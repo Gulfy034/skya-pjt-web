@@ -1,29 +1,38 @@
 .skya_title {
     font-family: "SKYA_Title-Pixel_demo";
     text-align: center;
-    font-size: 3rem;
     /*padding-left: 2%;*/
-    animation: SKYA_title_loaded 0.5s forwards, typing 2s steps(15, end) forwards, caret_blink 0.8s infinite;
+    animation: SKYA_title_loaded 0.5s forwards;
     /*make it in type-style */
-    overflow: hidden;
     border: 1px solid;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    box-shadow: -1px -1px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -1px -1px 1rem;
     cursor: pointer;
     scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+    text-wrap: wrap;
 }
 
-/*skya-title-divbox bg animation*/
+@media (min-width:370px) and (max-width:460px){
+    .skya_title_text {
+        font-size: clamp(75%, 4vw, 100%);
+    }
+}
 
-.inbox_roll{
-    animation: inbox_roll infinite;
+@media screen and (max-width:370px){
+    .skya_title_text {
+        font-size: clamp(50%, 4vw, 75%);
+    }
 }
 
 /*staus ani*/
 
 .skya_title:hover {
     animation: SKYA_title_inHover 0.35s forwards;
+    filter: url(#glitch1);
 }
 
 .skya_title:not(:hover) {
@@ -32,14 +41,15 @@
 
 @font-face {
     font-family: "SKYA_Title-Pixel_demo";
-    src: url("src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
+    src: url("/src/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
+    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
+    src: url("/src/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
 }
 
 @keyframes SKYA_title_inHover {
     0% {
         color: #571428;
+        font-size: 300%;
     }
     3%,
     15%,
@@ -60,18 +70,18 @@
     }
     100% {
         background-color: #00000036;
-        font-size: 50px;
+        font-size: calc(300% + 50%);
         color: #2bad1a;
-        box-shadow: -1px -1px 50px #96df8d;
-        text-shadow: 0px 0px 25px #94ca8c;
+        box-shadow: -0.1rem -0.1rem 5rem #96df8d;
+        text-shadow: 0px 0px 2.5rem #94ca8c;
     }
 }
 
 @keyframes SKYA_title_outHover {
 
     0%{
-        box-shadow:  -1px -1px 50px #96df8d;
-        font-size: 50px;
+        box-shadow:  -0.1rem -0.1rem 5rem #96df8d;
+        font-size: 350%;
     }
     3%,
     15%,
@@ -91,8 +101,8 @@
         color: #2bad1a;
     }
     100%{
-        box-shadow: -1px -1px 15px #96df8d;
+        box-shadow: -0.1rem -0.1rem 1.5rem #96df8d;
         color: #2bad1a;
-        font-size: 3rem;
+        font-size: calc(350% - 50%);
     }        
 }

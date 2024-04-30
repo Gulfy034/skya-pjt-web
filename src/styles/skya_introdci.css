@@ -2,14 +2,15 @@
     position: relative;
     display: grid;
     text-align: center;
-    cursor: pointer;
     border-radius: 2px;
     border: 1px solid #f3f3f3;
     color: #f3f3f3;
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
-    scroll-snap-align: start;
+    margin-left: auto;
+    margin-right: auto;
     border-top-left-radius: 1rem;
+    min-width: calc(100% - 5em);
+    line-height: 1.5rem;
+    text-wrap: wrap;
 }
 
 .container h3,
@@ -17,43 +18,55 @@
 .container h1 {
     text-align: left;
     padding-left: 1%;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    font-size: clamp(0.75rem, 4vw, 1.5rem);
 }
 
-.hr_conf{
+.hr_conf {
     color: #2bad1a;
     border-color: #2bad1a;
-    font-size: 12px;
+    font-size: clamp(0.75rem, 4vw, 1rem);
     padding: 1em 0;
+    border: 1px dashed;
     position: relative;
 }
 
-.hr_conf::before{
+.hr_conf::before {
     content: attr(attr-con);
-    position: absolute;
-    padding: 0 1rem;
-    line-height: 1px;
-    border: dashed #f3f3f3;
+    position: relative;
+    padding: 0 0;
+    line-height: 0.1rem;
     border-width: 0 99vw;
     width: fit-content;
 }
 
-span{
+.container div p{
+    text-wrap: wrap;
+}
+
+span {
     border-collapse: collapse;
-    border: 1px solid;
-    border-radius: 5px;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
     font-family: "Consolas";
     font-weight: 200;
+    cursor: pointer;
 }
 
-.container:hover {
-    animation: cont_hover 0.2s forwards;
+span:hover {
+    animation: codebk_inHover 0.2s forwards;
 }
 
-.container:not(:hover) {
-    animation: cont_outhover 0.5s forwards;
+span:not(:hover) {
+    animation: codebk_outHover 0.5s forwards;
 }
 
-@keyframes cont_hover {
+span:active {
+    animation: mousePushed 0.25s forwards;
+}
+
+@keyframes codebk_inHover {
     0% {
         border-color: #f3f3f3;
         color: #f3f3f3;
@@ -65,7 +78,7 @@ span{
     }
 }
 
-@keyframes cont_outhover {
+@keyframes codebk_outHover {
     0% {
         border-color: #2bad1a;
         color: #2bad1a;
@@ -74,5 +87,17 @@ span{
     100% {
         border-color: #f3f3f3;
         color: #f3f3f3;
+    }
+}
+
+@keyframes mousePushed {
+    from {
+        opacity: 1;
+        color: #2bad1a;
+    }
+
+    to {
+        opacity: 0.65;
+        color: #2bad1a;
     }
 }
