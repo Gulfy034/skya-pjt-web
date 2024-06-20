@@ -1,6 +1,4 @@
 'use-strict';
-import { ReactDOM } from "react";
-import React from "react";
 
 /*
 const router = createBrowserRouter([
