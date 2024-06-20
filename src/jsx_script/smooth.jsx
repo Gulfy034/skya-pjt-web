@@ -1,9 +1,7 @@
-// using gsap and lenis make page smooth-scrolling
+// using lenis make page smooth-scrolling
 // import { Lenis } from "lenis/react"
 
 // gsap.registerPlugin(ScrollTrigger);
-
-
 
 import Lenis from "lenis"
 

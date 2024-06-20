@@ -1,12 +1,12 @@
 /* full scrollbar */
 ::-webkit-scrollbar{
-    width: 6px;
+    width: 10px;
 }
 
 /* scrollbar thumb */
 ::-webkit-scrollbar-thumb{
     background-color: #285714ca;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover{

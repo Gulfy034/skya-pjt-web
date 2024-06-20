@@ -12,6 +12,7 @@
       "@scss/": ["./src/styles_scss/*"],
       "@jsx/": ["./src/jsx_script/*"],
       "@tsx/": ["./src/tsx_script/*"],
+      "@componemts": ["./components/*"]
     },
     
 
@@ -29,6 +30,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

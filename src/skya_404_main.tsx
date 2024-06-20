@@ -7,5 +7,5 @@ console.log("react app loaded")
 ReactDOM.createRoot(document.getElementById('errinsert')!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

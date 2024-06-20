@@ -6,63 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="SKYA_PROJECT of the game offical-Website, now it is building.">
     <title>WelCOMe-TO-[SKYA_PROJECT]-offical-Website !</title>
+
+    <!--
+        YOU ARE CHECKING THE DEV PANEL AGAIN,
+        WHY WOULD ANYONE WANT TO debug,
+        and did you find any the bugs?
+    -->
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/index.css">
-    <link rel="stylesheet" href="/src/styles/skya_nav.css">
-    <link rel="stylesheet" href="/src/styles/skya_title.css">
-    <link rel="stylesheet" href="/src/styles/skya_scrollbar.css">
-    <link rel="stylesheet" href="/src/styles/skya_introdci.css">
-    <link rel="stylesheet" href="/src/styles_scss/index_rt.scss">
-    <link rel="stylesheet" href="/src/styles_scss/index_rt_ani1.scss">
+    <link rel="stylesheet" href="/src/styles/index.scss">
+    <link rel="stylesheet" href="/src/styles/skya_nav.scss">
+    <link rel="stylesheet" href="/src/styles/skya_title.scss">
+    <link rel="stylesheet" href="/src/styles/skya_introdci.scss">
+    <link rel="stylesheet" href="/src/styles/skya_scrollbar.scss">
+    <link rel="stylesheet" href="/src/styles/skya_footer.scss">
+
+    <link rel="stylesheet" href="/src/styles/skya_toast.scss">
+    <link rel="stylesheet" href="/src/styles/skya_noti.scss">
+
+    <link rel="stylesheet" href="/src/styles/skya_crt.scss">
+
     </body>
 </head>
 
 <body>
+    <!-- if your environment not allows your browser to access Google opensource,
+        then use another opensource font,
+        or load it locally.
+         -->
+    <noscript>there is no way to load currectly without javascript!</noscript>
+    <!--note SOME browser disabled javascript in this website-->
 
+    <!--
+        if you are in a very slow network,
+        you may have a terrible experience of it.-->
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module" src="/src/jsx_script/languageSet.jsx"></script>
+
+    <!--TODO: bg*3, float, toast, introduci*3 -->
+    <script type="module" src="/components/skya_bg_three.jsx"></script>
+    <script type="module" src="/components/skya_floatwindow.jsx"></script>
+    <script type="module" src="/components/skya_toast.jsx"></script>
+    <script type="module" src="/components/skya_nav.jsx"></script>
+    <script type="module" src="/components/skya_footer.jsx"></script>
+    <script type="module" src="/components/skya_introduci_01.jsx"></script>
+    <script type="module" src="/components/skya_introduci_02.jsx"></script>
+    <script type="module" src="/components/skya_introduci_03.jsx"></script>
+    <script type="module" src="/components/skya_debugging.jsx"></script>
+    <script type="module" src="/components/skya_bgPart.jsx"></script>
+    <script type="module" src="/components/skya_bg_nest.jsx"></script>
+
     <script type="module" src="/src/jsx_script/glitch_eff_gsap.jsx"></script>
-    <script type="module" src="/src/jsx_script/bgroller_eff_gsap.jsx"></script>
     <script type="module" src="/src/jsx_script/typed_eff.jsx"></script>
     <script type="module" src="/src/jsx_script/smooth.jsx"></script>
+    <script type="module" src="/src/jsx_script/inbox_roll.jsx"></script>
 
     <div class="layout" id="layout">
+
+        <filters id="filters">
+            <!--from filters.jsx-->
+        </filters>
+
         <header>
-            <nav>
-                <ul class="firstul">
-                    <li><a href="#">Home-#</a></li>
-                    <li><a href="#Download">Download-*</a></li>
-                    <li><a href="#About">About-?</a></li>
-                    <li><a href="#Contect">Contect-@</a></li>
-                    <div class="nav_slider">
-                        <img src="/imgs/trigon_pixel_32x32.svg" alt="trigon nav slider">
-                    </div>
-                </ul>
-                <div class="secondul">
-                    <button class="langSet" id="langSet">Language</button>
-                    <button class="errPg" id="ErrPg"><a href="/404.html">Go-to 404-page</a></button>
-                </div>
+            <nav id="navbox">
+                <!--from skyanav.jsx-->
             </nav>
 
-            <div class="skya_title" onclick="bgroll()">
-                <p class="skya_title_text">SKYA_PROJECT</p>
-            </div>
-            <div class="inbox_roll">
-                suno-koncated-yet-another project.
-            </div>
+
 
         </header>
 
         <main>
+            <div class="skya_title">
+                <p class="skya_title_text">SKYA_PROJECT</p>
+
+                <!--TODO:fix bug canvas-->
+                <canvas id="inboxEff">
+                    <!--from inbox_roll.jsx-->
+                </canvas>
+
+            </div>
+
+            <div id="bgPart" class="bgPart">
+                <!--from skya_bgpart.jsx-->
+            </div>
+
             <div class="container">
                 <div>
                     <hr class="hr_conf" attr-con="Title-message">
                     <h3 class="cont_title_one"></h3>
                 </div>
 
-                <section>
-
+                <section class="aa">
+                    <!--content from skya_introduci_01.jsx-->
                 </section>
 
                 <div>
@@ -70,44 +105,43 @@
                     <h3 class="cont_title_two"></h3>
                 </div>
 
-                <section>
-
+                <section class="bb">
+                    <!--content from skya_introduci_02.jsx-->
                 </section>
 
-                <appInsert>
-                <!--here is the react componet inserted-->
-                </appInsert>
-                
                 <div>
-                    <hr class="hr_conf" attr-con="divi-line">
+                    <hr class="hr_conf" attr-con="Activities">
                     <h3 class="cont_title_three"></h3>
                 </div>
-            </div>
 
-            <section class="bg_rollin">
+                <section class="cc">
+                    <!--Content from skya_introduci_03.jsx-->
+                </section>
+
+                <appinsert>
+                    <!--TODO: here is the react component inserted-->
+                </appinsert>
+
                 <div>
-                    <div>
-                        <p>suno-koncated-yet-another project suno-koncated-yet-another project</p>
-                    </div>
-                    <div>
-                        <p>SKYA_PROJECT offical-Website SKYA_PROJECT offical-Website</p>
-                    </div>
-                    <div>
-                        <p>now demo unavaliable.now demo unavaliable.</p>
-                    </div>
+                    <hr class="hr_conf" attr-con="notes">
+                    <h3 class="cont_title_four"></h3>
                 </div>
-            </section>
 
+            </div>
         </main>
 
-        <footer>
-            <div class="mainfoot">
-                <p>this is the footer</p>
-            </div>
+        <footer id="footer">
+            <!--from skya_footer.jsx-->
         </footer>
 
     </div>
-    <!--using pixi.js & three.js & typed.js & gsap !!!-->
+    <canvas class="bg" id="bg">
+        <!--TODO: add the 3d-pixel bg animation-->
+    </canvas>
+
+    <canvas class="popwindow">
+    </canvas>
+    <!--using pixi.js & three.js & typed.js & gsap to beautify the webpage-->
 </body>
 
 </html>

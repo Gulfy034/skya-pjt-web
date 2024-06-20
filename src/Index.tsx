@@ -1,14 +1,27 @@
-import './styles_scss/index_rt.scss'
+'use-strict';
+import { ReactDOM } from "react";
+import React from "react";
 
-function Index() {
+/*
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: "",
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
+*/
+
+export default function Index() {
 
   return (
     <>
-    <div>
-
-    </div>
+      
     </>
   )
 }
-
-export default Index

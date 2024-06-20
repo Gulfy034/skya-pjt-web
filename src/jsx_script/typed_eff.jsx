@@ -7,8 +7,6 @@ var skyaTitle = {
     strings: [
         "~# this project name: ...", "SKYA_PROJECT"
     ],
-    loop: true,
-    loopCount: 13,
     showCursor: false,
     backDelay: 3500,
     typeSpeed: 40,
@@ -16,7 +14,7 @@ var skyaTitle = {
 
 var contOneTyped = {
     strings: [
-        "<h3>~ SKYA_Project Website is <span>'opening'</span> for every!</h3>"
+        "<h3>~ SKYA_Project Website is <span id={'span01'}>'opening'</span> for every!</h3>"
     ],
     showCursor: false,
     typeSpeed: 25,
@@ -30,8 +28,16 @@ var contTwoTyped = {
     typeSpeed: 25,
 }
 
-var skyaTiTyped = new Typed(".skya_title_text", skyaTitle);
-var commonTypedOne = new Typed(".cont_title_one", contOneTyped);
-var commonTypedTwo = new Typed(".cont_title_two", contTwoTyped);
+let skyaTiTyped = new Typed(".skya_title_text", skyaTitle);
+let commonTypedOne = new Typed(".cont_title_one", contOneTyped);
+let commonTypedTwo = new Typed(".cont_title_two", contTwoTyped);
 
 /*for reload by clicking this div-class*/
+
+/*
+
+let skyaTitleload = new document.addEventListener("load", (e)=> {
+
+})
+
+*/

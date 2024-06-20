@@ -1,3 +1,11 @@
+*{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: read-only;
+}
+
 body {
     background: radial-gradient(ellipse at top,
             #285714 0%, #040807 100%);
@@ -13,6 +21,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     color: #989898;
+    animation: bg_ani 2s infinite;
+    cursor: url("/imgs/cursor_skya_demo.svg"), auto;
     grid-template-areas:
         "header"
         "content"
@@ -83,4 +93,13 @@ footer {
     font-family: "Home-Sweet-Home-normal",'Consolas';
     text-align: center;
     justify-content: center;
+}
+
+@keyframes bg_ani {
+    0%,100%{
+        filter: url(#glitch2);
+    }
+    50%{
+        filter: url(#glitch1);
+    }
 }

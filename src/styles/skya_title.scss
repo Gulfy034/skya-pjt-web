@@ -1,0 +1,150 @@
+.skya_title {
+    font-family: "SKYA_Title-Pixel_demo";
+    text-align: center;
+    /*padding-left: 2%;*/
+    animation: SKYA_title_loaded 0.5s forwards;
+    /*make it in type-style */
+    border: 2px dashed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: -1px -1px 1rem;
+    cursor: pointer;
+    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+    text-wrap: wrap;
+    max-height: 175px;
+    max-width: 500px;
+    text-shadow:
+    0 0 .08em rgba(#fff,1),
+    -.08em 0 .08em rgba(#0ff,1),
+    .08em 0 .08em rgba(#f0f,1);
+}
+
+@media (min-width:370px) and (max-width:460px){
+    .skya_title_text {
+        font-size: clamp(75%, 4vw, 100%);
+    }
+    .skya_title {
+        max-height: 100px;
+    }
+}
+
+@media (min-width:200px) and (max-width:370px){
+    .skya_title_text {
+        font-size: clamp(50%, 4vw, 75%);
+    }
+    .skya_title {
+        max-height: 80px;
+    }
+}
+
+@media screen and (max-width:200px){
+    .skya_title_text {
+        font-size: clamp(50%, 4vw, 25%);
+    }
+    .skya_title {
+        max-height: 75px;
+    }
+}
+/*staus ani*/
+
+.skya_title:hover {
+    animation: SKYA_title_inHover 0.35s forwards;
+    filter: url(#glitch1);
+}
+
+.skya_title:not(:hover) {
+    animation: SKYA_title_outHover 0.5s forwards;
+}
+
+.skya_title:active{
+    animation: SKYA_title_onclick 0.5s forwards;
+}
+
+@keyframes SKYA_title_inHover {
+    0% {
+        color: #571428;
+        font-size: 280%;
+        border-style: dashed;
+        border-radius: 2px;
+        filter: grayscale(50%);
+    }
+    3%,
+    15%,
+    18%,
+    30%,
+    40%,
+    60% {
+        color: #285714;
+    }
+
+    5%,
+    10%,
+    20%,
+    25%,
+    55%,
+    65% {
+        color: #2bad1a;
+    }
+    100% {
+        filter: grayscale(0%);
+        border-style: solid;
+        background-color: #00000036;
+        font-size: calc(280% + 20%);
+        color: #2bad1a;
+        box-shadow: 1px 1px 45px #4ede41;
+        text-shadow: 0px 0px 2.5rem #94ca8c;
+    }
+}
+
+@keyframes SKYA_title_outHover {
+
+    0%{
+        box-shadow: 1px 1px 45px #4ede41;
+        font-size: 300%;
+        border-style: solid;
+        filter: grayscale(0%);
+    }
+    3%,
+    15%,
+    18%,
+    30%,
+    40%,
+    60% {
+        color: #285714;
+    }
+
+    5%,
+    10%,
+    20%,
+    25%,
+    55%,
+    65% {
+        color: #2bad1a;
+    }
+    100%{
+        filter: grayscale(40%);
+        border-style: dashed;
+        text-shadow: -0.1rem -0.1rem 1.5rem #96df8d;
+        color: #2bad1a;
+        font-size: calc(300% - 20%);
+    }
+
+
+}
+
+    @keyframes SKYA_title_onclick {
+        0%{
+            background-color: #2bad1a;
+            font-size: calc(280% + 20%);
+            opacity: 10%;
+        }
+        100%{
+            opacity: 50%;
+            color: #94ca8c;
+            font-size: calc(300% - 20%);
+            filter: blur(1px);
+        }
+    }

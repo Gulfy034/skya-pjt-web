@@ -21,14 +21,16 @@ export default defineConfig({
       {find: '@css',
         replacement: path.resolve(__dirname, 'src/styles')
       },
-      {find: '@scss',
-        replacement: path.resolve(__dirname, 'src/styles_scss')
-      },
       {find: '@jsx',
         replacement: path.resolve(__dirname, 'src/jsx_script')
       },
-      {find: '@tsx_etc',
-        replacement: path.resolve(__dirname, 'src/tsx_script')
+      {
+        find: '@components',
+        replacement:path.resolve(__dirname, 'components')
+      },
+      {
+        find: '@hooks',
+        replacement:path.resolve(__dirname, 'hooks')
       }
     ],
   },

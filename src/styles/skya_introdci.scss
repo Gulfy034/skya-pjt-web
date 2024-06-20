@@ -2,15 +2,39 @@
     position: relative;
     display: grid;
     text-align: center;
-    border-radius: 2px;
-    border: 1px solid #f3f3f3;
+    border: 2px dashed #dcdbdb;
     color: #f3f3f3;
-    margin-left: auto;
-    margin-right: auto;
-    border-top-left-radius: 1rem;
-    min-width: calc(100% - 5em);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border-radius: 1rem;
     line-height: 1.5rem;
     text-wrap: wrap;
+    background-color: #2bad1a14;
+}
+
+.container:hover{
+    animation: commHover 0.35s forwards;
+}
+
+.container:not(:hover){
+    animation: commOutHover 0.35s forwards;
+}
+
+@media (min-width:300px) and (max-width:600px) {
+    .container {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+@keyframes contaOutHover {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.55;
+    }
 }
 
 .container h3,
@@ -56,49 +80,60 @@ span {
 }
 
 span:hover {
-    animation: codebk_inHover 0.2s forwards;
+    border-color: #2bad1a;
+    color: #2bad1a;
+    animation: commHover 0.2s forwards;
 }
 
 span:not(:hover) {
-    animation: codebk_outHover 0.5s forwards;
+    animation: commOutHover 0.5s forwards;
 }
 
 span:active {
+    border-color:#f3f3f3;
+    color: #f3f3f3;
     animation: mousePushed 0.25s forwards;
 }
 
-@keyframes codebk_inHover {
+@keyframes commHover {
     0% {
-        border-color: #f3f3f3;
-        color: #f3f3f3;
+        opacity: 0.55;
+        filter: blur(1px);
     }
 
     100% {
-        border-color: #2bad1a;
-        color: #2bad1a;
+        opacity: 1;
+        filter: blur(0px);
     }
 }
 
-@keyframes codebk_outHover {
+@keyframes commOutHover {
     0% {
-        border-color: #2bad1a;
-        color: #2bad1a;
+        opacity: 1;
+        filter: blur(0px);
     }
 
     100% {
-        border-color: #f3f3f3;
-        color: #f3f3f3;
+        opacity: 0.55;
+        filter: blur(1px);
     }
 }
 
 @keyframes mousePushed {
     from {
         opacity: 1;
-        color: #2bad1a;
     }
 
     to {
         opacity: 0.65;
-        color: #2bad1a;
+    }
+}
+
+@keyframes glitchAni {
+    0%{
+        filter: url(#glitch1);
+    }
+    100%{
+        filter: url(#glitch2);
     }
 }
