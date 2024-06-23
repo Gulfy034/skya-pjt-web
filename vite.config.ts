@@ -18,7 +18,7 @@ export default defineConfig({
       {find: '@',
         replacement: path.resolve(__dirname, 'src')
       },
-      {find: '@css',
+      {find: '@sty',
         replacement: path.resolve(__dirname, 'src/styles')
       },
       {find: '@jsx',

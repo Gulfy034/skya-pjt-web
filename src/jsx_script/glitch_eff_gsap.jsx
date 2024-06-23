@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export function glitcheffOne() {
-    const tur = document.querySelector('feTurbulance');
+    const tur = document.querySelector('#fe2');
     // const errTitle = document.getElementsByClassName('errTitleText');
 
     const glitchTl = gsap.timeline({

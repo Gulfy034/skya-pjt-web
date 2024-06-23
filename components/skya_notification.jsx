@@ -1,4 +1,8 @@
-/* eslint-disable react/prop-types */
+/*
+import gsap from "gsap";
+*/
+
+import React from "react";
 
 import {
     AiOutlineCheckCircle,
@@ -7,7 +11,7 @@ import {
     AiOutlineInfoCircle,
     AiOutlineWarning,
   } from "react-icons/ai";
-  import "/src/styles/skya_noti.scss";
+import "/src/styles/skya_toast.scss";
   
 // this part is used for making this icon into the toast
 
@@ -37,4 +41,3 @@ import {
   };
   
   export default Notification;
-  

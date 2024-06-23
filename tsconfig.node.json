@@ -9,8 +9,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@css/": ["./src/styles/*"],
-      "@jsx/": ["./src/jsx_script/*"]
+      "@sty/": ["./src/styles/*"],
+      "@jsx/": ["./src/jsx_script/*"],
+      "@components": ["./components/*"],
+      "@hooks": ["./hooks"]
     },
   },
   "include": ["vite.config.ts"]

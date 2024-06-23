@@ -1,10 +1,11 @@
-header{
+header {
     position: sticky;
     top: 0;
     z-index: 10000;
 }
 
-/*nav IFSELF style*/
+/*-----nav part*/
+
 nav {
     color-scheme: dark;
     border: 1px solid #14285700;
@@ -17,182 +18,176 @@ nav {
     margin: auto;
     text-wrap: wrap;
     white-space: none;
+
+    &:hover {
+        animation: navInHover 0.35s forwards;
+    }
+
+    &:not(:hover) {
+        animation: navOutHover 0.5s forwards;
+    }
+
+    ul {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }
 
-/*nav UPPER elements part style*/
 @media (min-width:910px) {
     .navbox {
         height: 112px;
     }
 }
 
-ul {
-    padding-left: 15%;
-    padding-right: 15%;
+/*-----nav UPPER part*/
+
+ul.firstul {
     display: inline-flex;
     align-self: center;
-}
-
-.firstul {
     box-shadow: 2rem 4rem 4rem #00000033;
     border-radius: 0.5rem;
-}
 
-.firstul linkbox {
-    display: flex;
-    list-style: none;
-    background-color: #14285728;
-    box-shadow: 1rem 2rem 2rem #00000033;
-    color: #28145757;
-}
 
-.firstul linkbox .navbtn {
-    border-radius: 3px;
-    border-top: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    text-decoration: none;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    font: 600 1.7rem "Home-Sweet-Home-normal", 'Consolas';
-    /* This should be shown as similar as mobile phones, so 'Consolas' fontfamliy will not gonna works */
-    /* added a similar font to make it a great view.*/
+    div.linkbox {
+        list-style: none;
+        border-radius: 1rem;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        border-right: 2px solid;
+        background-color: #14285728;
+        box-shadow: 1rem 2rem 2rem #00000033;
+        color: #28145757;
+
+        button.navbtn {
+            border-radius: 3px;
+            border-color: #2bad1a;
+            background-color: #285714;
+            text-decoration: none;
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            font: 600 1.7rem "Home-Sweet-Home-normal", 'Consolas';
+            /* This should be shown as similar as mobile phones, so 'Consolas' fontfamliy will not gonna works */
+            /* added a similar font to make it a great view.*/
+
+            &:hover {
+                animation: navTex1_Inhov 0.35s forwards;
+                cursor: pointer;
+            }
+
+            &:not(:hover) {
+                animation: navTex1_Outhov 0.35s forwards;
+            }
+
+            &:active {
+                box-shadow: inset 5px 5px 5px #00000030,
+                    inset -5px -5px 5px #00000036;
+                animation: click_ani 0.35s forwards;
+            }
+        }
+    }
 }
 
 @media (min-width:900px) and (max-width:100vw) {
-    .firstul linkbox .navbtn {
+    ul.firstul div.linkbox button.navbtn {
         font-size: clamp(2rem, 6vw, 2.3rem);
     }
 }
 
 @media (min-width:700px) and (max-width:900px) {
-    .firstul linkbox .navbtn {
+    ul.firstul div.linkbox button.navbtn {
         font-size: clamp(1.5rem, 6vw, 2rem);
     }
 }
 
 @media (min-width:570px) and (max-width:700px) {
-    .firstul linkbox .navbtn {
+    ul.firstul div.linkbox button.navbtn {
         font-size: clamp(1rem, 6vw, 1.5rem);
     }
 }
 
 @media (min-width:405px) and (max-width:570px) {
-    .firstul linkbox .navbtn {
+    ul.firstul div.linkbox button.navbtn {
         font-size: clamp(15px, 6vw, 1rem);
     }
 }
 
-@media (max-width:405px) {
-    .firstul linkbox .navbtn {
-        font-size: clamp(6px, 6vw, 15px);
-    }
-
-    .firstul li {
+@media (min-width:320px) and (max-width:405px) {
+    ul.firstul {
         text-wrap: warp;
         white-space: scroll;
+
+        div.linkbox button.navbtn {
+            font-size: 11px;
+
+        }
     }
 }
 
-/*nav UPPER status*/
+/*-----nav BUTTOM part*/
 
-.firstul linkbox .navbtn:hover {
-    animation: navTex1_Inhov 0.35s;
-    animation-fill-mode: forwards;
-}
-
-.firstul linkbox .navbtn:not(:hover) {
-    animation: navTex1_Outhov 0.35s;
-    animation-fill-mode: forwards;
-}
-
-.firstul linkbox .navbtn:active {
-    box-shadow: inset 5px 5px 5px #00000030,
-        inset -5px -5px 5px #00000036;
-    animation: click_ani 0.35s forwards;
-}
-
-/*nav ITSELF style status*/
-
-nav:hover {
-    animation: navInHover 0.35s forwards;
-}
-
-nav:not(:hover) {
-    animation: navOutHover 0.5s forwards;
-}
-
-.nav_slider {
-    size: 100px;
-    float: left;
-}
-
-/*nav BUTTOM part*/
-
-.secondul {
+ul.secondul {
     box-shadow: 1rem 2rem 2rem #00000033;
-}
 
-.secondul linkbox .navbtn {
-    display: flex;
-}
+    div.linkbox .navbtn {
+        display: flex;
+    }
 
-#langSet,
-#testPg,
-#errPg,
-.errPg {
-    color: #2bad1a;
-    background-color: #281457;
-    border: 1px solid;
-    cursor: pointer;
-    font-family: "Home-Sweet-Home-normal", 'Consolas';
-}
+    %sharedNavbtn {
+        color: #2bad1a;
+        background-color: #281457;
+        border: 1px solid;
+        cursor: pointer;
+        font-family: "Home-Sweet-Home-normal", 'Consolas';
+    }
 
-#testPg a,
-#errPg a,
-.errPg a {
-    color: #2bad1a;
-    background-color: #281457;
-    border: none;
-    text-decoration: none;
+    %sharedNavLink {
+        color: #2bad1a;
+        background-color: #281457;
+        border: none;
+        text-decoration: none;
+    }
+
+    button#langSet,
+    button#errPg {
+        @extend %sharedNavbtn;
+
+        &:hover {
+            animation: navTex2_Inhov 0.35s forwards;
+        }
+
+        &:not(:hover) {
+            animation: navTex2_Outhov 0.35s forwards;
+        }
+
+        &::after {
+            text-decoration: line-through;
+        }
+    }
+
+    button#errPg a {
+        @extend %sharedNavLink;
+    }
+
 }
 
 @media (min-width:610px) and (max-width:100vw) {
 
-    #langSet,
-    #testPg,
-    #errPg,
-    .errPg a {
+    button#langSet,
+    button#errPg a {
         font-size: clamp(1rem, 4vw, 1.5rem);
     }
 }
 
 @media screen and (max-width:610px) {
 
-    #langSet,
-    #testPg,
-    #errPg,
-    .errPg {
+    button#langSet,
+    button#errPg a {
         font-size: clamp(0.75rem, 4vw, 1rem);
     }
 
 }
 
-/*nav BUTTOM part status*/
-
-#langSet:hover,
-#errPg:hover,
-.errPg:hover {
-    animation: navTex2_Inhov 0.35s forwards;
-}
-
-#langSet:after,
-#errPg:after,
-.errPg::after {
-    text-decoration: line-through;
-}
-
-/*animations Part*/
+/*-----animations Part*/
 
 @keyframes navTex1_Inhov {
     0% {
@@ -262,6 +257,36 @@ nav:not(:hover) {
     100% {
         border-color: #285714;
     }
+}
+
+@keyframes navTex2_Outhov {
+    0% {
+        border-color: #285714;
+        filter: url(#glitch1);
+    }
+
+    15%,
+    25%,
+    35%,
+    65% {
+        border-color: #2bad1a;
+    }
+
+    20%,
+    30%,
+    45%,
+    75% {
+        border-color: #285714;
+    }
+
+    100% {
+        border-color: #2bad1a;
+    }
+
+}
+
+@keyframes navTex2_click {
+    0% {}
 }
 
 /*nav ITSELF status ani*/

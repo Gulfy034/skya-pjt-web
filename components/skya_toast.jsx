@@ -1,18 +1,14 @@
 import React from "react";
-import gsap from "gsap";
-import styled from "styled-components";
-import { createRoot } from "react-dom/client";
 import { useNotification } from "/hooks/use-notification.jsx";
-import "/src/styles/skya_toast.scss";
 
-const { NotificationComponent, triggerNotification } =
-  useNotification("top-center");
+export default function Toast() {
+  const { NotificationComponent, triggerNotification } =
+    useNotification("top-center");
 
-const toastDom = document.querySelector("#toast");
-const toastInsert = createRoot(toastDom)
-toastInsert.render(
-  <>
-    <div id="toastBox">
+  return (
+    <div className="toast">
+      {NotificationComponent}
+      <h1>Toast Component</h1>
       <div className="btns">
         <button
           onClick={() =>
@@ -61,5 +57,5 @@ toastInsert.render(
         </button>
       </div>
     </div>
-  </>
-)
+  );
+}

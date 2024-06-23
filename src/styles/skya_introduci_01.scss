@@ -1,0 +1,24 @@
+span#spanOne {
+    border-collapse: collapse;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    font-family: "Consolas", "Home-Sweet-Home-normal";
+    font-weight: 200;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #2bad1a;
+        color: #2bad1a;
+        animation: commHover 0.2s forwards;
+    }
+
+    &:not(:hover) {
+        animation: commOutHover 0.5s forwards;
+    }
+
+    &:active {
+        border-color: #f3f3f3;
+        color: #f3f3f3;
+        animation: mousePushed 0.25s forwards;
+    }
+}

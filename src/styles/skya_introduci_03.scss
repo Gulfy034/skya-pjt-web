@@ -1,0 +1,80 @@
+.cc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emptybox {
+    width: 25rem;
+    height: 10rem;
+    background-color: #2bad1a;
+    border-radius: 3.1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: #f7f7f7;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.scrollbox {
+    justify-content: start;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrollbox_container {
+    justify-content: start;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.scrollbox_container_card {
+    position: relative;
+    width: 25rem;
+    height: 10rem;
+    background-color: #f7f7f7;
+    border-radius: 3.1rem;
+    flex-shrink: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.scrollbox_container_card p {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #171717;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.picsheet {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    opacity: 0.5;
+}
+
+
+.bgsheet {
+    position: absolute;
+    bottom: 0;
+    height: 6rem;
+}
+
+.pic1,
+.bg1 {
+    left: 0;
+}
+
+.pic2,
+.bg2 {
+    left: calc(-100% + -5rem);
+}
+
+.pic3,
+.bg3 {
+    left: calc(-200% + -10rem);
+}

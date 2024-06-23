@@ -12,28 +12,29 @@
     border-radius: 4px;
     padding: 10px 10px;
     cursor: pointer;
-}
 
-.skya_button_one a{
-    text-decoration: none;
-    color: #2bad1a;
-}
+    a {
+        text-decoration: none;
+        color: #2bad1a;
+    }
 
-.skya_button_one:hover{
-    animation: btnOne_inHover 0.5s forwards;
-    filter: url(#glitch1);
-}
+    &:hover {
+        animation: btnOne_inHover 0.5s forwards;
+        filter: url(#glitch1);
+    }
 
-.skya_button_one:not(:hover){
-    animation: btnOne_outHover 0.4s;
+    &:not(:hover) {
+        animation: btnOne_outHover 0.4s;
+    }
 }
 
 /*animation below*/
 
 @keyframes btnOne_inHover {
-    0%{
+    0% {
         font-size: 20px;
     }
+
     3%,
     15%,
     18%,
@@ -50,23 +51,26 @@
     55%,
     65% {
         color: #2bad1a;
-        
+
     }
-    50%{
+
+    50% {
         font-size: 21px;
         color: #4fed3a;
     }
-    100%{
+
+    100% {
         font-size: 23px;
         font-family: "SKYA_Title-Pixel_demo";
     }
 }
 
 @keyframes btnOne_outHover {
-    0%{
+    0% {
         font-size: 23px;
         color: #4fed3a;
     }
+
     3%,
     15%,
     18%,
@@ -84,10 +88,12 @@
     65% {
         color: #2bad1a;
     }
-    50%{
+
+    50% {
         font-size: 21px;
     }
-    100%{
+
+    100% {
         font-size: 20px;
         color: #2bad1a;
         font-family: "SKYA_Title-Pixel_demo";
