@@ -1,15 +1,24 @@
-footer{
+footer {
+    position: relative;
     text-align: center;
     border-radius: 1.5rem;
     border: 2px dashed #2bad1a;
     color: #2bad1a;
-    font-family: "SKYA_Title-Pixel_demo";
-    font-size: 1rem;
+    font: 1rem "XTypeWriter-Bold";
     white-space: wrap;
-    height: auto;
     cursor: pointer;
-    margin-top: 5%;
-    margin-bottom: auto;
+    margin: 5% auto 0;
     padding: 1%;
-    height: 10rem;
+    width: 75%;
+
+    .auguroz_footer {
+        font: 0.9rem "PixeloidSans-Regular", 'Consolas';
+        text-align: center;
+    }
+}
+
+@media (max-width:375px) {
+    footer {
+        scale: 1.2;
+    }
 }

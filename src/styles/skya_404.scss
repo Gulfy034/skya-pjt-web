@@ -1,105 +1,65 @@
-*{
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-modify: read-only;
-}
+@use 'skya_loading';
+@use 'shared/cursor';
+@use 'shared/fonts';
+@use 'shared/animation';
 
 body {
-    background: radial-gradient(ellipse at top,
-            #285714 0%, #040807 100%);
-    color-scheme: dark;
-    scroll-behavior: smooth;
-    display: grid;
-    object-fit: contain;
-    height: 100vh;
-    width: calc(100vw - 1em);
-    white-space: nowrap;
-    text-wrap: wrap;
-    overflow-x: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    color: #989898;
-    animation: bg_ani 2s infinite;
-    cursor: url("/imgs/cursor_skya_demo.svg"), auto;
     grid-template-areas:
         "header"
         "content"
         "footer";
 }
 
-@font-face {
-    font-family: "SKYA_Title-Pixel_demo";
-    src: url("/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
-}
-@font-face {
-    font-family: "Home-Sweet-Home-normal";
-    src: url("/font/home-sweet-home.regular.otf") format('truetype');
-}
-
-@font-face {
-    font-family: "Home-Sweet-Home-outline";
-    src: url("/font/home-sweet-home.outline-regular.otf") format('truetype');
-}
-
-@media screen and (max-width: 535px) {
-    * {
-        max-width: calc(100vw - 1em);
-    }
-}
-
 header {
     grid-area: header;
-    row-gap: 40px;
-    max-width: 100vw;
+    row-gap: 35px;
     color: #bababa;
-}
 
-.title {
-    text-align: center;
-    max-width: 100vw;
-    font: 3rem "Home-Sweet-Home-outline";
-    margin-top: 3rem;
-    font-size: clamp(2.5rem, 2vw, 3rem);
-    margin-left: auto;
-    margin-right: auto;
+    #bgPart {
+        animation: bg_ani 2s infinite;
+        z-index: -1;
+    }
 
-}
+    .skyaTitle {
+        .errTitleText {
+            animation: bg_ani 1s infinite;
+        }
+    }
 
-span {
-    text-align: left;
-    font: 600 16px 'SKYA_Title-pixel_demo';
-    color: #2bad1a;
+    .title {
+        text-align: center;
+        font: 2.5rem "PixeloidSans-Regular";
+        margin: 3rem auto;
+        font-size: clamp(2.5rem, 2vw, 3rem);
+        color: #2bad1a;
+        //animation: bg_ani 2s infinite;
+    }
+
 }
 
 main {
     grid-area: content;
-}
 
-.output {
-    font-family: "Home-Sweet-Home-normal",'Consolas','Cascadia';
+    .skyaBtnE {
+        animation: bg_ani 2s infinite;
+    }
+
+    span {
+        text-align: left;
+        font: 600 1rem 'SKYA_Title-pixel_demo';
+        color: #2bad1a;
+    }
+
+    .output {
+        font: 1rem "PixeloidSans-Regular", 'Consolas', 'Cascadia';
+        color: #2bad1a57;
+    }
 }
 
 footer {
     grid-area: footer;
-    text-align: center;
-    position: relative;
 }
 
-.auguroz_footer {
-    font-family: "Home-Sweet-Home-normal",'Consolas';
-    text-align: center;
-    justify-content: center;
-}
-
-@keyframes bg_ani {
-    0%,100%{
-        filter: url(#glitch2);
-    }
-    50%{
-        filter: url(#glitch1);
-    }
+svg.hiddenFilter {
+    display: none;
 }

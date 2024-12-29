@@ -1,26 +1,47 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
 
-import Index from './routes/Index'
+import IndexPage from './routes/route_Index';
+import DownloadPage from './routes/route_Download';
+import AboutPage from './routes/route_About';
+import ContectPage from './routes/route_Contect';
+import Error404Page from './routes/route_404';
+import { DbgOutputStatus } from "@components/skya_debugging";
 
-const router = createBrowserRouter([
+
+//TODO: Make router reflash the page
+
+const root = createBrowserRouter([
   {
     path: "/",
-    element: <div>hello</div>
-  }
-])
+    element: <IndexPage />,
+    errorElement: <Error404Page />,
+    children: [
+      {
+        path: "/Download",
+        element: <DownloadPage />,
+      },
+      {
+        path: "/About",
+        element: <AboutPage />,
+      },
+      {
+        path: "/Contect",
+        element: <ContectPage />,
+      }
+    ]
+  },
+]);
 
-console.log("react componenets loaded");
-console.log("react router loaded")
-
-ReactDOM.createRoot(document.querySelector("appinsert")!).render(
+ReactDOM.createRoot(document.querySelector("#layout")!).render(
   <React.StrictMode>
-    <Index />
-    <RouterProvider router={router}/>
+    <RouterProvider router={root} />
   </React.StrictMode>
-)
+);
+
+DbgOutputStatus();

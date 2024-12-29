@@ -3,136 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="SKYA_PROJECT of the game offical-Website, now it is building.">
-    <title>WelCOMe-TO-[SKYA_PROJECT]-offical-Website !</title>
-
-    <!--
-        YOU ARE CHECKING THE DEV PANEL AGAIN,
-        WHY WOULD ANYONE WANT TO debug,
-        and did you have found any 'bugs'?
-    -->
-    <link rel="manifest" href="manifest.json">
+    <meta name="keywords" content="SKYA_PROJECT, gamedev, skya, skya project, auguroz" />
+    <title>~# SKYA_PROJECT Website is loading!</title>
+    <!--<link rel="manifest" href="manifest.json">-->
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/index.scss">
-    <link rel="stylesheet" href="/src/styles/skya_nav.scss">
-    <link rel="stylesheet" href="/src/styles/skya_title.scss">
-
-    <link rel="stylesheet" href="/src/styles/skya_introdci.scss">
-    <link rel="stylesheet" href="/src/styles/skya_introduci_01.scss">
-    <link rel="stylesheet" href="/src/styles/skya_introduci_02.scss">
-    <link rel="stylesheet" href="/src/styles/skya_introduci_03.scss">
-
-    <link rel="stylesheet" href="/src/styles/skya_scrollbar.scss">
-    <link rel="stylesheet" href="/src/styles/skya_footer.scss">
-
-    <link rel="stylesheet" href="/src/styles/skya_bgPart.scss">
-
-    <link rel="stylesheet" href="/src/styles/skya_toast.scss">
-
-    <link rel="stylesheet" href="/src/styles/skya_crt.scss">
-
-    </body>
 </head>
 
 <body>
-    <!-- if your environment not allows your browser to access Google opensource,
-        then use another opensource font,
-        or load it locally.
-         -->
-    <noscript>there is no way to load currectly without javascript!</noscript>
-    <!--note SOME browser disabled javascript in this website-->
+    <!--
+        1:You have opened dev tool panel again, don't you?
+        2:WHY WOULD ANYONE WANT TO --debug. (donotupperthecommandline)
+        3:Did you have found any 'bugs'?
+        4:i wanna *try* to *catch* them by *using* my glass bottle.
+    -->
+    <!--
+        note SOME browsers that has disabled javascript.
+    -->
+    <noscript>can't load correctly without javascript, please enable.</noscript>
 
     <!--
-        if you are having a very slow network,
-        you may have a terrible experience in it.-->
+        if you access it with bad network,
+        you may have a *TERRIBLE* experience on it.
+    -->
     <script type="module" src="/src/main.tsx"></script>
 
-    <!--TODO: float, toast, introduci*3 -->
+    <div class="layout" id="layout"></div>
 
-    <!--<script type="module" src="/components/skya_floatwindow.jsx"></script>-->
-    <!--<script type="module" src="/components/skya_toast.jsx"></script>-->
-    <script type="module" src="/components/skya_playsfx.jsx"></script>
-    <script type="module" src="/components/skya_nav.jsx"></script>
-    <script type="module" src="/components//skya_title.jsx"></script>
-    <script type="module" src="/components/skya_introduci_01.jsx"></script>
-    <script type="module" src="/components/skya_introduci_02.jsx"></script>
-    <script type="module" src="/components/skya_introduci_03.jsx"></script>
-    <script type="module" src="/components/skya_footer.jsx"></script>
-    <script type="module" src="/components/skya_bgPart.jsx"></script>
-    <!--<script type="module" src="/components/skya_debugging.jsx"></script>-->
-
-    <script type="module" src="/src/jsx_script/glitch_eff_gsap.jsx"></script>
-    <script type="module" src="/src/jsx_script/typed_eff.jsx"></script>
-    <script type="module" src="/src/jsx_script/smooth.jsx"></script>
-
-    <div class="layout" id="layout">
-
-        <header>
-            <nav id="navbox">
-                <!--from skya_nav.jsx-->
-            </nav>
-        </header>
-
-        <main>
-            <div class="skya_title">
-                <!--from skya_title.jsx-->
-            </div>
-
-            <div id="bgPart">
-                <!--from skya_bgpart.jsx-->
-            </div>
-
-            <div class="container">
-
-                <div>
-                    <hr class="hr_conf" attr-con="Title-message">
-                </div>
-
-                <section class="aa">
-                    <!--content from skya_introduci_01.jsx-->
-                </section>
-
-                <div>
-                    <hr class="hr_conf" attr-con="Tips!">
-                </div>
-
-                <section class="bb">
-                    <!--content from skya_introduci_02.jsx-->
-                </section>
-
-                <div>
-                    <hr class="hr_conf" attr-con="Activities">
-                </div>
-
-                <section class="cc">
-                    <!--Content from skya_introduci_03.jsx-->
-                </section>
-
-                <appinsert>
-                    <!--TODO: here is the react component inserted-->
-                </appinsert>
-
-                <div>
-                    <hr class="hr_conf" attr-con="notes">
-                    <h3 class="cont_title_four"></h3>
-                </div>
-
-            </div>
-        </main>
-
-        <footer id="footer">
-            <!--from skya_footer.jsx-->
-        </footer>
-
-    </div>
-    <canvas class="bg" id="bg">
-        <!--TODO: add the 3d-pixel bg animation-->
-    </canvas>
-
-    <canvas class="popwindow">
-    </canvas>
-    <!--using pixi.js & three.js & typed.js & gsap to beautify the webpage-->
 </body>
 
 </html>

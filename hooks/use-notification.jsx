@@ -1,7 +1,7 @@
 import {useCallback, useState} from "react";
-import Notification from "/components/skya_notification.jsx";
+import Notification from "@components/skya_notification";
 
-const useNotification = (position = "top-right") => {
+const useNotification = (position = 'top-right') => {
   const [notification, setNotification] = useState(null);
 
   let timer;

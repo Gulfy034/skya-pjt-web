@@ -1,3 +1,10 @@
+@use 'skya_loading';
+@use 'shared/bgNormal';
+@use 'shared/cursor';
+@use 'shared/fonts';
+@use 'shared/styled';
+@use 'shared/animation';
+
 * {
     user-select: none;
     -moz-user-select: none;
@@ -7,26 +14,12 @@
 }
 
 body {
-    background: radial-gradient(ellipse at top,
-            #142857 0%, #040807 100%);
+    color-scheme: dark;
+    //object-fit: contain;
+    white-space: wrap;
+    margin: 0 1px;
+    overflow-x: hidden;/* Very important */
     scroll-behavior: smooth;
-    color-scheme: light dark;
-    object-fit: contain;
-    white-space: nowrap;
-    min-height: 100vh;
-    /* Very important */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100vw - 1.5em);
-    min-width: 490px;
-    overflow-x: hidden;
-    cursor: url("/imgs/cursor_skya_demo.svg"), auto;
-}
-
-@media (max-width: 640px) {
-    * {
-        max-width: calc(100vw - 1em);
-    }
 }
 
 .layout {
@@ -50,7 +43,6 @@ footer {
     grid-area: footer;
 
     &:hover {
-        font-family: "Consolas";
         animation: onHoverani 0.35s forwards;
     }
 
@@ -59,75 +51,5 @@ footer {
     }
     &:active{
         animation: mousePushed 0.35s forwards;
-    }
-}
-
-@font-face {
-    font-family: "SKYA_Title-Pixel_demo";
-    src: url("/font/SKYA_TitlePixel_demo-Regular.otf") format('truetype');
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
-}
-
-@font-face {
-    font-family: "Home-Sweet-Home-normal";
-    src: url("/font/home-sweet-home.regular.otf") format('truetype');
-}
-
-@font-face {
-    font-family: "Home-Sweet-Home-outline";
-    src: url("/font/home-sweet-home.outline-regular.otf") format('truetype');
-}
-
-@font-face {
-    font-family: "XTypeWriter-Bold";
-    src: url("/font/XTypewriter-Bold.woff") format('woff');
-    src: url("/font/XTypewriter-Bold.woff2") format('woff2');
-}
-
-@font-face {
-    font-family: "XTypeWriter-Regular";
-    src: url("/font/XTypewriter-Regular.woff") format('woff');
-}
-
-@font-face {
-    font-family: "Signwood-Italic";
-    src: url("/font/Signwood-Italic.woff") format('woff');
-    src: url("/font/Signwood-Italic.woff2") format('woff2');
-}
-
-@font-face {
-    font-family: "Signwood-Regular";
-    src: url("/font/Signwood-Regular.woff") format('woff');
-    src: url("/font/Signwood-Regular.woff2") format('woff2');
-}
-
-@keyframes onHoverani {
-    0% {
-        opacity: 0.65;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes outHoverani {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.65;
-    }
-}
-
-@keyframes mousePushed {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0.25;
     }
 }

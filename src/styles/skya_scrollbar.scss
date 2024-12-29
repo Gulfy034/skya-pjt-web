@@ -1,31 +1,76 @@
+$currentScrollbarWidth: 8px;
+$currentScrollbarHeight: 1vh;
+
+
 /* full scrollbar */
-::-webkit-scrollbar{
-    width: 10px;
+::-webkit-scrollbar {
+    display: none; //rip default scrollbar ;>
+    //width: $currentScrollbarWidth;
+    //z-index: auto;
 }
 
-/* scrollbar thumb */
-::-webkit-scrollbar-thumb{
+span.scrollbar {
+    display: flex;
+    position: fixed;
+    z-index: 4;
+    align-self: flex-end;
+    width: $currentScrollbarWidth;
+    height: 20px;
+    background-color: #2bad1a;
+    //box-shadow: ;
+    
+}
+
+
+/* w a s t e d
+
+// scrollbar thumb
+::-webkit-scrollbar-thumb {
     background-color: #285714ca;
     border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background-color: #285714;
 }
 
-/* scrollbar top/bottom button */
-::-webkit-scrollbar-button{
+// scrollbar top/bottom button
+::-webkit-scrollbar-button {
     background-image: url('/imgs/trigon_pixel_32x32.svg');
     overflow: hidden;
     display: block;
 }
 
-/* scrollbar ex-part */
-::-webkit-scrollbar-track{
+// scrollbar ex-part
+::-webkit-scrollbar-track {
     background: #2bad1a fixed;
 }
 
-/* scrollbar row/colomn crossed-part */
-::-webkit-scrollbar-corner{
+// scrollbar row/colomn crossed-part
+::-webkit-scrollbar-corner {
     background-color: #285714;
 }
+
+
+@keyframes in {
+    0% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: #2bad1a;
+    }
+}
+
+@keyframes out {
+    0% {
+        opacity: 1;
+        border-color: #2bad1a;
+    }
+
+    100% {
+        opacity: 0.65;
+    }
+}
+*/
