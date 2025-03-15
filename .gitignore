@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-#test sub skya_webpages
-skya_webtest
+# Failsafe backup files
+backup
 
 # Editor directories and files
 .vscode/*
