@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
+    "target": "ES2024",// this is radical
     "useDefineForClassFields": true,
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],// such radical omg
     "module": "ESNext",
     "skipLibCheck": true,
     "baseUrl": "./",//modified
@@ -12,7 +12,6 @@
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
     },
-
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -29,6 +28,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": ["src"],//added
 }
