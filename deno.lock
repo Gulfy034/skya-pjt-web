@@ -27,10 +27,10 @@
     "npm:react-dom@19": "19.0.0_react@19.0.0",
     "npm:react-i18next@^15.4.1": "15.4.1_i18next@24.2.3__typescript@5.7.3_react@19.0.0_typescript@5.7.3",
     "npm:react-router-dom@^7.3.0": "7.4.0_react@19.0.0_react-dom@19.0.0__react@19.0.0",
-    "npm:react-typed@^2.0.12": "2.0.12_react@19.0.0",
     "npm:react@19": "19.0.0",
     "npm:sass@^1.85.1": "1.86.0",
     "npm:three@0.174": "0.174.0",
+    "npm:typed.js@^2.1.0": "2.1.0",
     "npm:typescript-eslint@^8.24.1": "8.27.0_eslint@9.22.0_typescript@5.7.3_@typescript-eslint+parser@8.27.0__eslint@9.22.0__typescript@5.7.3",
     "npm:typescript@~5.7.2": "5.7.3",
     "npm:vite@^6.2.0": "6.2.2_@types+node@22.13.10_sass@1.86.0"
@@ -1350,13 +1350,6 @@
         "turbo-stream"
       ]
     },
-    "react-typed@2.0.12_react@19.0.0": {
-      "integrity": "sha512-sn59lrb4NKgvQLDGBRWM4wRNEz5Fp37F0BrLA2cKUmDqPSyQJOOiFigz+6wJof0o99QoE16nVCa3B3ID34ejsg==",
-      "dependencies": [
-        "react",
-        "typed.js"
-      ]
-    },
     "react-use-measure@2.1.7_react@19.0.0_react-dom@19.0.0__react@19.0.0": {
       "integrity": "sha512-KrvcAo13I/60HpwGO5jpW7E9DfusKyLPLvuHlUyP5zqnmAPhNc6qTRjUQrdTADl0lpPpDVU2/Gg51UlOGHXbdg==",
       "dependencies": [
@@ -1606,10 +1599,10 @@
         "npm:react-dom@19",
         "npm:react-i18next@^15.4.1",
         "npm:react-router-dom@^7.3.0",
-        "npm:react-typed@^2.0.12",
         "npm:react@19",
         "npm:sass@^1.85.1",
         "npm:three@0.174",
+        "npm:typed.js@^2.1.0",
         "npm:typescript-eslint@^8.24.1",
         "npm:typescript@~5.7.2",
         "npm:vite@^6.2.0"
