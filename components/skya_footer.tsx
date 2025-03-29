@@ -1,5 +1,4 @@
 import React from "react";
-import gsap from "gsap";
 import '@styles/skya_footer.scss';
 import { useLocation } from "react-router-dom";
 
@@ -14,7 +13,7 @@ function IndexFooter() {
                 </p>
                 <hr />
                 <p>This Page's hosted by <a href="http://vercel.com">Vercel</a></p>
-                <p>The sourcecode is on <a href="http://github.com/Gulfy034/skya-pjt-web">Github</a></p>
+                <p>Sourcecode is on <a href="http://github.com/Gulfy034/skya-pjt-web">Github</a></p>
             </div>
         </footer>
     )
