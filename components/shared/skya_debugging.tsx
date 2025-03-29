@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import * as renderDebugging from 'react-device-detect';
 import { useRouteError } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // debugging console notes:
 export function DbgOutputStatus() {
@@ -20,11 +19,11 @@ export function DbgOutputNetwork() {
         function handleOffline() {
             setOnline(false);
         }
-        window.addEventListener('online', handleOnline);
-        window.addEventListener('offline', handleOffline);
+        globalThis.addEventListener('online', handleOnline);
+        globalThis.addEventListener('offline', handleOffline);
         return () => {
-            window.removeEventListener('online', handleOnline);
-            window.removeEventListener('offline', handleOffline);
+            globalThis.removeEventListener('online', handleOnline);
+            globalThis.removeEventListener('offline', handleOffline);
         }
     }, []);
     return <h1>{online ? 'Online' : 'Offine'}</h1>
@@ -37,13 +36,4 @@ renderDebugging.isMobile == true;
 export function DbgOutputRouter() {
     const dbgRouter = useRouteError();
     console.log('Error:', dbgRouter);
-}
-
-//----- export vercel speed-insights into react compoment
-export function VercelSpeedIs() {
-    return(
-        <>
-            <SpeedInsights/>
-        </>
-    )
 }
