@@ -1,39 +1,45 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import gsap from "gsap";
-import currentLang from "@compoments/languaageSet";
-import '@styles/skya_floatwindow.scss';
-
-const modal = document.getElementById("modalbox");
-const openModal = document.getElementById("openModal");
-const closeModal = document.getElementById("closeModal");
+import React, { useState } from "react";
+import { createPortal } from "react-dom";
+import "@styles/skya_floatwindow.scss";
 
 //TODO: make modal window available and animated.
+const [smodalVisible, setSmodalVisible] = useState(false);
+const smodalControl = {
+    visible: smodalVisible,
+    closeMe: () => {
+        setSmodalVisible(false);
+    },
+};
 
-/*
-const modalDom = document.querySelector('#modalbox');
-const modalInsert = createRoot(modalDom);
-modalInsert.render(
-  <canvas is="modalbox">
-    <button id="openModal">Open the modal</button>
-
-    <dialog id="modal">
-      <p>Modal content. Click the below button or press the escape key to close.</p>
-      <button id="closeModal">Close this modal</button>
-      <p>test paragragh.</p>
-    </dialog>
-  </canvas>
-)
-
-function showModal() {
-
+export function Smodal() {
+    return (
+        <>
+        </>
+    );
 }
 
-if (modal) {
-  openModal &&
-    openModal.addEventListener("click", () => modal.showModal());
+// another popon window
 
-  closeModal &&
-    closeModal.addEventListener("click", () => modal.closeModal());
+function PopUtil({ PopChildren }: any) {
+    return (
+        <>
+            {PopChildren}
+        </>
+    )
 }
-*/
+
+export function PopWindow() {
+    return (
+        <div className="popbox" id="popbox">
+            <div className="popcontent" id="popcontent">
+                {createPortal(
+                    <PopUtil>
+                        <p>this is just a content.</p>
+                    </PopUtil>,
+                document.body
+                )}
+            </div>
+            <div className="closepop">closeIt</div>
+        </div>
+    );
+}
