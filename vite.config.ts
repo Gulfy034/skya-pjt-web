@@ -13,10 +13,6 @@ export default defineConfig({
       {
         find: '@components',
         replacement: resolve(__dirname, 'components'),
-      },
-      {
-        find: '@hooks',
-        replacement: resolve(__dirname, 'hooks'),
       }
     ],
   },

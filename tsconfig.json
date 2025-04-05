@@ -9,7 +9,6 @@
     "paths": {
       "@styles/*": ["src/styles/*"],
       "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"],
     },
 
     /* Bundler mode */
