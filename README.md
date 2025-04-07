@@ -19,4 +19,4 @@ use `npm i` to get the package cache, and `npm run dev` to run it locally.
 
 ## Notes
 the whole website was built by vite, based on vite template "react-swc-ts".
-do not use deno (another node package solution) because there's a issue of using SWC instead of babel.
+do not use deno (another node package solution) because there"s a issue of using SWC instead of babel.
