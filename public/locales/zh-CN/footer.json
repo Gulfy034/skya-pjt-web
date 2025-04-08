@@ -1,8 +1,8 @@
 {
     "common": {
         "part1": "'SKYA_PROJECT' 和 'SKYA_PROJECT_DEMO' 均处于开发进程, 其开源的 DEMO 版本客户端使用GPLv3开源证书.",
-        "part2": "该网址由 <a href='http://cloudflare.com'>Cloudflare Pages</a> 提供部署支持",
-        "part3": "源代码详见 <a href='http://github.com/Gulfy034/skya-pjt-web'>Github</a>"
+        "part2": "该网址由 <CloudflareLink>Cloudflare Pages</CloudflareLink> 提供部署支持",
+        "part3": "源代码详见 <GithubLink>Github</GithubLink>"
     },
     "auguroz": {
         "random1": "<span>~#</span> 虽然这里什么都没有，但是还是有办法访问这个页面的 ！",

@@ -1,39 +1,58 @@
 import React from "react";
-import '@styles/skya_footer.scss';
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
+
+import "@styles/skya_footer.scss";
 
 //TODO: animate footer
-//TODO: i18n localize
+//TODO: need more stylish changes
 
 function IndexFooter() {
+    const { t } = useTranslation(["footer"]);
     return (
         <footer>
             <div className="mainfoot">
-                <p>"SKYA_PROJECT" and "SKYA_PROJECT_DEMO" are in development, the opensource DEMO version client is licensed under the GPLv3 License.
-                </p>
+                <p>{t("common.part1")}</p>
                 <hr />
-                <p>This Page's hosted by <a href="http://vercel.com">Vercel</a></p>
-                <p>Sourcecode is on <a href="http://github.com/Gulfy034/skya-pjt-web">Github</a></p>
+                <p>
+                    <Trans
+                        i18nKey={"part2"}
+                        components={{
+                            CloudflareLink: <Link to={"https://cloudflare.com"}/>
+                        }}
+                    >
+                        {t("common.part2")}
+                    </Trans>
+                </p>
+                <p>
+                    <Trans
+                        i18nKey={"part3"}
+                        components={{
+                            GithubLink: <Link to={"https://github.com/Gulfy034/skya-pjt-web"}/>
+                        }}
+                    >
+                        {t("common.part3")}
+                    </Trans>
+                </p>
             </div>
         </footer>
     )
 }
 
 function ErrorFooter() {
+    const { t } = useTranslation(["footer"]);
     return (
         <footer>
-            <div className="auguroz_footer">
-                <span>~#</span> there is nothing but there is another way to access this page!
-            </div>
+            <div className="auguroz_footer">{t("auguroz.random1")}</div>
         </footer>
     )
 }
 
 export default function Footer() {
-    const isIndex = useLocation();
+    const location = useLocation();
     return (
-        isIndex.pathname == '/' | '/Download' | '/About' | '/Contect'
-                    ? (<IndexFooter />)
-                    : (<ErrorFooter />)
+        location.pathname == "/" | "/Download" | "/About" | "/Contect"
+            ? (<IndexFooter />)
+            : (<ErrorFooter />)
     )
 }
