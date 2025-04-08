@@ -1,35 +1,49 @@
-@font-face {
-    font-family: "SKYA_Title-Pixel_demo";
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format('woff');
-    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format('woff2');
-}
+// --skya-pjt-font
 
 @font-face {
+    font-family: "SKYA_Title-Pixel_demo";
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff") format("woff");
+    src: url("/font/SKYA_TitlePixel_demo-Regular.woff2") format("woff2");
+}
+
+// --third-party-fonts
+
+// en
+@font-face {
     font-family: "PublicPixel";
-    src: url("/font/PublicPixel.woff") format('woff');
-    src: url("/font/PublicPixel.woff2") format('woff2');
+    src: url("/font/PublicPixel.woff") format("woff");
+    src: url("/font/PublicPixel.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "DigitTech16-Regular";
-    src: url("/font/DigitTech16-Regular.woff") format('woff');
-    src: url("/font/DigitTech16-Regular.woff2") format('woff2');
+    src: url("/font/DigitTech16-Regular.woff") format("woff");
+    src: url("/font/DigitTech16-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "PixeloidSans-Regular";
-    src: url("/font/PixeloidSans.woff") format('woff');
-    src: url("/font/PixeloidSans.woff2") format('woff2');
+    src: url("/font/PixeloidSans.woff") format("woff");
+    src: url("/font/PixeloidSans.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "XTypeWriter-Bold";
-    src: url("/font/XTypewriter-Bold.woff") format('woff');
-    src: url("/font/XTypewriter-Bold.woff2") format('woff2');
+    src: url("/font/XTypewriter-Bold.woff") format("woff");
+    src: url("/font/XTypewriter-Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "XTypeWriter-Regular";
-    src: url("/font/XTypewriter-Regular.woff") format('woff');
-    src: url("/font/XTypewriter-Regular.woff2") format('woff2');
+    src: url("/font/XTypewriter-Regular.woff") format("woff");
+    src: url("/font/XTypewriter-Regular.woff2") format("woff2");
+}
+
+// zh-hans, zh-hant, jp, ko
+@font-face {
+    font-family: "fusion-pixel-Monospace";
+    src: url("/font/fusion-pixel-font-10px-monospaced/fusion-pixel-10px-monospaced-zh_hans.woff2");
+    src: url("/font/fusion-pixel-font-10px-monospaced/fusion-pixel-10px-monospaced-zh_hant.woff2");
+    src: url("/font/fusion-pixel-font-10px-monospaced/fusion-pixel-10px-monospaced-ja.woff2");
+    src: url("/font/fusion-pixel-font-10px-monospaced/fusion-pixel-10px-monospaced-ko.woff2");
 }
