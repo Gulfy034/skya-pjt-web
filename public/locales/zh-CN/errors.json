@@ -1,0 +1,9 @@
+{
+    "label": "OH-HO 404!",
+    "title":"~ 什么都没有欸! ~",
+    "notfound": "404-not-found !",
+    "main": {
+        "part1": "output:",
+        "part2": "<span>~#</span> 找不到你输入的地址 !"
+    }
+}
