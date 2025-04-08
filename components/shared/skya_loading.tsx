@@ -1,13 +1,13 @@
 import React from "react";
-import gsap from "gsap";
-import '@styles/skya_loading.scss';
+import { useTranslation } from "react-i18next";
+import "@styles/skya_loading.scss";
 
 //TODO: make this LoadingPart and animate it
-//TODO: i18n localize
 export default function Loading() {
+    const {t} = useTranslation(["loading"]);
     return (
         <div id="loading">
-            loading...
+            {t("content")}
         </div>
     )
 }
