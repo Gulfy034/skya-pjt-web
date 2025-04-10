@@ -1,0 +1,14 @@
+/*
+This file is used to clearify the layers about
+EVERY mentioned components.
+Usage:
+1. @use "shared/layers" as layers
+2. layers.$variable
+*/
+
+$background: -1; // canvas background
+$common: 1; // nav banner div
+$elements: 2; // some animated svg
+$modals: 3; // popup modal window
+$elementsTop: 4; // some top svg or canvas
+$effects: 5; // some css filter or shader effects

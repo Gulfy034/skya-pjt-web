@@ -1,0 +1,10 @@
+/*
+purely, they are variables.
+usage:
+1. @use "shared/colors" as colors
+2. colors.$something
+*/
+
+$global-color: #142857;
+$error-color: #285714;
+$highlight-color: #2bad1a;

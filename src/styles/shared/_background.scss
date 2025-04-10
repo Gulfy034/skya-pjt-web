@@ -1,5 +1,7 @@
+@use "colors" as colors;
+
 body {
     background: radial-gradient(ellipse at top,
-            #285714 0%, #040807 100%) fixed;
+            colors.$global-color 0%, #111 100%) fixed;
     background-size: cover;
 }
