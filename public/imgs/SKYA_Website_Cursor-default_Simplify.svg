@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>skya-pjt-web-cursor</title>
+ <g display="none" fill="none" stroke="#2bad1a" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1.9158">
+  <path d="m8 15-6-3.7812h12z"/>
+  <path d="m8 1-7.3 6h14.6z"/>
+ </g>
+ <g fill="none" stroke="#2bad1a" stroke-linecap="square" stroke-linejoin="bevel" stroke-width="1.9982">
+  <path d="m11.906 13.954-7.3968 0.056291 10.538-6.7535z"/>
+  <path d="m4.0269 1.6606-3.0336 9.3771 12.821-8.2167z"/>
+ </g>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title>skya-pjt-web-cursor</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Gulfieen</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>Gulfieen</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:description>this is a part of the cursor styled svg for the website</dc:description>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+</svg>

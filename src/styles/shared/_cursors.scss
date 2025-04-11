@@ -1,0 +1,19 @@
+// TODO: add more svg styles
+
+/*
+auto | default | none | context-menu 
+help | pointer | progress | wait | cell | crosshair
+text | vertical-text | alias | copy | move | no-drop | not-allowed
+e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize
+ns-resize | nesw-resize | nwse-resize | col-resize | row-resize
+all-scroll | zoom-in | zoom-out | grab | grabbing
+*/
+
+$default : url("/imgs/SKYA_Website_Cursor-default_Simplify.svg"), default;
+//$wait: url("/imgs/SKYA_Website_Cursor-wait_Simplify.svg"), wait;
+$pointer: url("/imgs/SKYA_Website_Cursor-pointer_Simplify.svg"), pointer;
+//cursor: url("/imgs/SKYA_Website_Cursor-notallowed_Simplify.svg"), not-allowed;
+//cursor: url("/imgs/SKYA_Website_Cursor-progress_Simplify.svg"), progress;
+//cursor: url("/imgs/SKYA_Website_Cursor-text_Simplify.svg"), text;
+//cursor: url("/imgs/SKYA_Website_Cursor-grab_Simplify.svg"), grab;
+//cursor: url("/imgs/SKYA_Website_Cursor-grabbing_Simplify.svg"), grabbing;
