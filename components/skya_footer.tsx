@@ -8,7 +8,7 @@ import "@styles/skya_footer.scss";
 //TODO: need more stylish changes
 
 function IndexFooter() {
-    const { t } = useTranslation(["footer"]);
+    const { t } = useTranslation(["footers"]);
     return (
         <footer>
             <div className="mainfoot">
@@ -18,7 +18,7 @@ function IndexFooter() {
                     <Trans
                         i18nKey={"part2"}
                         components={{
-                            CloudflareLink: <Link to={"https://cloudflare.com"}/>
+                            CloudflareLink: <Link to={"https://cloudflare.com"} />
                         }}
                     >
                         {t("common.part2")}
@@ -28,7 +28,7 @@ function IndexFooter() {
                     <Trans
                         i18nKey={"part3"}
                         components={{
-                            GithubLink: <Link to={"https://github.com/Gulfy034/skya-pjt-web"}/>
+                            GithubLink: <Link to={"https://github.com/Gulfy034/skya-pjt-web"} />
                         }}
                     >
                         {t("common.part3")}
@@ -43,15 +43,24 @@ function ErrorFooter() {
     const { t } = useTranslation(["footer"]);
     return (
         <footer>
-            <div className="auguroz_footer">{t("auguroz.random1")}</div>
-        </footer>
+            <div className="augurozFooter">
+                <Trans
+                    i18nKey={"main"}
+                    components={{
+                        span: <span />
+                    }}
+                >
+                    {t("auguroz.random1")}
+                </Trans>
+            </div>
+        </footer >
     )
 }
 
 export default function Footer() {
     const location = useLocation();
     return (
-        location.pathname == "/" | "/Download" | "/About" | "/Contect"
+        location.pathname == "/" || "/Download" || "/About" || "/Contect"
             ? (<IndexFooter />)
             : (<ErrorFooter />)
     )
