@@ -1,3 +1,7 @@
+@use "shared/colors" as colors;
+@use "shared/animation";
+@use "shared/layers" as layers;
+
 $currentScrollbarWidth: 8px;
 $currentScrollbarHeight: 1vh;
 
@@ -6,71 +10,26 @@ $currentScrollbarHeight: 1vh;
 ::-webkit-scrollbar {
     display: none; //rip default scrollbar ;>
     //width: $currentScrollbarWidth;
-    //z-index: auto;
 }
 
-span.scrollbar {
-    display: flex;
-    position: fixed;
-    z-index: 4;
-    align-self: flex-end;
-    width: $currentScrollbarWidth;
-    height: 20px;
-    background-color: #2bad1a;
-    //box-shadow: ;
-    
-}
-
-
-/* w a s t e d
-
-// scrollbar thumb
-::-webkit-scrollbar-thumb {
-    background-color: #285714ca;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #285714;
-}
-
-// scrollbar top/bottom button
-::-webkit-scrollbar-button {
-    background-image: url('/imgs/trigon_pixel_32x32.svg');
-    overflow: hidden;
+div#scrollProgress{
+    position: relative;
+    //visibility: hidden;
+    color: colors.$highlight-color;
+    z-index: layers.$elements;
+    margin: 0 auto;
+    width: 80%;
+    height: 6px;
     display: block;
-}
+    border: 1px colors.$highlight-color solid;
+    border-radius: 0 0 3px 3px;
+    background-color: colors.$highlight-color;
 
-// scrollbar ex-part
-::-webkit-scrollbar-track {
-    background: #2bad1a fixed;
-}
-
-// scrollbar row/colomn crossed-part
-::-webkit-scrollbar-corner {
-    background-color: #285714;
-}
-
-
-@keyframes in {
-    0% {
-        opacity: 0.65;
+    ::before{
+        animation: elementsAppear forwards 200ms;
     }
 
-    100% {
-        opacity: 1;
-        background-color: #2bad1a;
+    ::after{
+        animation: elementsDisappear forwards 200ms;
     }
 }
-
-@keyframes out {
-    0% {
-        opacity: 1;
-        border-color: #2bad1a;
-    }
-
-    100% {
-        opacity: 0.65;
-    }
-}
-*/

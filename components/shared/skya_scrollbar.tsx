@@ -1,17 +1,56 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
-import { isMobile } from "react-device-detect";
 
 import "@styles/skya_scrollbar.scss";
 
-//TODO: mobile detection => hide this
-//TODO: scroll and show progress.
+const ScrollProgress = () => {
+    const [progress, setProgress] = useState(0);
+    const lenisRef = useRef<Lenis>(null);
+    const rafHandle = useRef<number>(0);
 
-export default function Scrollbar() {
-    const scrollRef = useRef();
-    //const isMobileHide =  useRef();
+    useEffect(() => {
+        lenisRef.current = new Lenis({
+            duration: 1.2,
+            //easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+        })
+
+        // scroll event
+        const handleScroll = ({ scroll }: { scroll: number }) => {
+            const scrollHeight = document.documentElement.scrollHeight
+            const viewportHeight = window.innerHeight
+            const maxScroll = scrollHeight - viewportHeight
+
+            const progress = maxScroll > 0
+                ? Math.min(1, scroll / maxScroll)
+                : 0
+
+            setProgress(progress * 100)
+        }
+
+        // looply call requestAnimationFrames
+        const raf = (time: number) => {
+            lenisRef.current?.raf(time)
+            rafHandle.current = requestAnimationFrame(raf)
+        }
+        rafHandle.current = requestAnimationFrame(raf)
+
+        // listen the scroll event
+        lenisRef.current?.on('scroll', handleScroll)
+
+        // clear event
+        return () => {
+            lenisRef.current?.off('scroll', handleScroll)
+            lenisRef.current?.destroy()
+            if (rafHandle.current) {
+                cancelAnimationFrame(rafHandle.current)
+            }
+        }
+    }, [])
 
     return (
-        <span className="scrollbar" ref={scrollRef} /*style={isMobileHide}*/ ></span>
+        <div id="scrollProgress" style={{ width: `${progress}%` }}/>
     )
 }
+
+export default ScrollProgress;
