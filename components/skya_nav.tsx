@@ -1,15 +1,18 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { NavLink, Link } from "react-router-dom";
-import gsap from "gsap";
-//import { isMobile } from "react-device-detect";
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { isMobile } from "react-device-detect";
 
-//import { playsfxOne, playsfxTwo } from '@components/skya_playsfx';
-//import '@components/languageSet';
+//import { playsfxOne, playsfxTwo } from "@components/skya_playsfx";
+//import "@components/shared/skya_languageSet";
+import Smodal from "@components/shared/skya_floatwindow";
+import ButtonFeed from "@components/skya_feed";
 
-import '@styles/skya_nav.scss';
+import "@styles/skya_nav.scss";
 
 //TODO: mobile detect => change this appearence.
-//TODO: test router buttons should be removed.
+//TODO: test router buttons (eg. goto404, gotoAugruoz) should be removed.
 //TODO: localize text.
 
 /*
@@ -23,86 +26,80 @@ const RenderMobile = () => {
 */
 
 export default function Nav() {
-
-    interface boxTl {
-        current: undefined
-    }
-    const navContainer = useRef();
-    const boxTl = useRef();
-
-    useLayoutEffect(() => {
-        //use same timelines
-        const navctx = gsap.context(() => {
-            boxTl.current = gsap.timeline()
-                .from(".firstul", {
-                    x: -10,
-                    y: -15,
-                    duration: 0.25,//seconds
-                })
-                .from(".navbtn", {
-                    x: -12,
-                    y: -25,
-                    scale: 1.15,
-                    duration: 0.15,//seconds
-                })
-                .from(".secondul", {
-                    x: -12,
-                    y: -15,
-                    duration: 0.15,//seconds
-                })
-        }, navContainer);
-        return () => navctx.revert();
-    }, []);
+    const {t} = useTranslation(["nav"]);
+    // Control ModalWindow
+    const [smodalVisible, setSmodalVisible] = useState(false);
+    const smodalControl = {
+        visible: smodalVisible,
+        closeMe: () => {
+            setSmodalVisible(false);
+        },
+    };
 
     return (
-        <nav id="navbox" ref={navContainer}>
+        <>
+            {createPortal(
+                <Smodal
+                    {...smodalControl}
+                />,
+                document.body
+            )}
+            <nav id="navbox">
+                <ul className="firstul">
+                    <NavLink
+                        className="navbtn"
+                        id="navHome"
+                        to={`/`}
+                    >
+                        {t("home")}
+                    </NavLink>
 
-            <ul className="firstul">
-                <NavLink
-                    className="navbtn"
-                    id="navHome"
-                    to={`/`}>
-                    HOME #
-                </NavLink>
+                    <NavLink
+                        className="navbtn"
+                        id="navDownload"
+                        to={`/Download`}
+                    >
+                        {t("download")}
+                    </NavLink>
 
-                <NavLink
-                    className="navbtn"
-                    id="navDownload"
-                    to={`/Download`}>
-                    DOWNLOAD %
-                </NavLink>
+                    <NavLink
+                        className="navbtn"
+                        id="navAbout"
+                        to={`/About`}
+                    >
+                        {t("about")}
+                    </NavLink>
 
-                <NavLink
-                    className="navbtn"
-                    id="navAbout"
-                    to={`/About`}>
-                    ABOUT ?
-                </NavLink>
+                    <NavLink
+                        className="navbtn"
+                        id="navContect"
+                        to={`/Contect`}
+                    >
+                        {t("contect")}
+                    </NavLink>
+                </ul>
 
-                <NavLink
-                    className="navbtn"
-                    id="navContect"
-                    to={`/Contect`}>
-                    CONTECT @
-                </NavLink>
-            </ul>
+                <ul className="secondul">
+                    <button
+                        type="button"
+                        className="navbtnT"
+                        id="langSet"
+                        onClick={() => setSmodalVisible(true)}
+                    >
+                        {t("languages")}
+                    </button>
 
-            <ul className="secondul">
-                <button
-                    className="navbtnT"
-                    id="langSet">
-                    Language
-                </button>
+                    <ButtonFeed />
 
-                <NavLink
-                    className="navbtnT"
-                    id="errPg"
-                    to={`/404`}>
-                    Goto-404-Page
-                </NavLink>
-
-            </ul>
-        </nav>
+                    <NavLink
+                        className="navbtnT"
+                        id="errPg"
+                        to={`/404`}
+                    >
+                        {t("goto404")}
+                    </NavLink>
+                </ul>
+            </nav>
+        </>
     );
-
 }

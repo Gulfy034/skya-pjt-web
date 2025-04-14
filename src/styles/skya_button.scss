@@ -1,14 +1,14 @@
+@use "shared/cursors" as cursors;
+
 .skyaBtnD,
 .skyaBtnE {
     color: #2bad1a;
-    font-size: 20px;
-    font-family: XTypeWriter-Bold;
+    font: 20px "XTypeWriter-Bold", "fusion-pixel-Monospace";
     background-color: #13131313;
     border: 3px solid;
     margin: 7% auto 10%;
     border-radius: 4px;
     padding: 10px 10px;
-    cursor: pointer;
     transform-origin: left;
 
     a {
@@ -17,6 +17,7 @@
     }
 
     &:hover {
+        cursor: cursors.$pointer;
         animation: btn_inHover 0.5s forwards;
     }
 

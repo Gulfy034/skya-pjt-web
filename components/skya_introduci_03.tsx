@@ -1,6 +1,5 @@
 import React from "react";
-import gsap from "gsap";
-import '@styles/skya_introduci_03.scss';
+import "@styles/skya_introduci_03.scss";
 
 export default function IntrThree() {
     return (

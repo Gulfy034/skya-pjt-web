@@ -1,9 +1,10 @@
-@use 'skya_loading';
-@use 'shared/bgNormal';
-@use 'shared/cursor';
-@use 'shared/fonts';
-@use 'shared/styled';
-@use 'shared/animation';
+@use "shared/background";
+@use "shared/fonts";
+@use "shared/styled";
+@use "shared/cursors" as cursors;
+@use "shared/animation";
+
+@use "skya_loading";
 
 * {
     user-select: none;
@@ -20,6 +21,7 @@ body {
     margin: 0 1px;
     overflow-x: hidden;/* Very important */
     scroll-behavior: smooth;
+    cursor: cursors.$default;
 }
 
 .layout {
@@ -43,13 +45,13 @@ footer {
     grid-area: footer;
 
     &:hover {
-        animation: onHoverani 0.35s forwards;
+        animation: elementsHoverOne 0.35s forwards;
     }
 
     &:not(:hover) {
-        animation: outHoverani 0.35s forwards;
+        animation: elementsOutHoverOne 0.35s forwards;
     }
     &:active{
-        animation: mousePushed 0.35s forwards;
+        animation: elementsClick 0.35s forwards;
     }
 }

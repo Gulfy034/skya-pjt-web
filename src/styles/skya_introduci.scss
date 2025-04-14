@@ -1,8 +1,9 @@
+@use "shared/animation";
+
 .container {
     position: relative;
     display: grid;
-    text-align: center;
-    text-wrap: warp;
+    text-align: Left;
     white-space: break-spaces;
     border: 2px dashed #dcdbdb;
     color: #f3f3f3;
@@ -12,55 +13,65 @@
     background-color: #2bad1a14;
     //scroll-snap-type: y mandatory;
 
+    h1,
+    h2,
+    h3 {
+        padding-left: 3%;
+        margin: 1rem 0 6rem;
+        font: clamp(1.3rem, 4vw, 1.5rem) "PixeloidSans-Regular", "fusion-pixel-Monospace";
+    }
+
+    h4 {
+        padding-left: 4%;
+        font-family: "PixeloidSans-Regular", "fusion-pixel-Monospace";
+    }
+
+    p {
+        font: clamp(1rem, 4vw, 1.1rem) "fusion-pixel-Monospace";
+        padding: 4.5%;
+    }
+
     &:hover {
-        animation: commHover 0.35s forwards;
+        animation: elementsHoverOne 0.35s forwards;
     }
 
     &:not(:hover) {
-        animation: commOutHover 0.35s forwards;
+        animation: elementsOutHoverOne 0.35s forwards;
     }
 }
 
-.container h4{
-    text-align: left;
-    padding-left: 4%;
-    font-family: "PixeloidSans-Regular", 'Consolas';
-}
-
-.container h3,
-.container h2,
-.container h1 {
-    text-align: left;
-    padding-left: 3%;
-    margin: 1rem 0 6rem;
-    font: clamp(1.3rem, 4vw, 1.5rem) "PixeloidSans-Regular", 'Consolas';
-}
-
-.hr_conf {
+hr.hr_conf {
     color: #2bad1a;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     border-color: #2bad1a;
     font-size: clamp(0.75rem, 4vw, 1rem);
     padding: 1em 0;
-    border: 1px dashed;
-    border-radius: 8px;
     position: relative;
-    font-family: "PublicPixel", 'Consolas';
+    font-family: "PublicPixel", "Consolas", "fusion-pixel-Monospace";
 
     &::before {
         content: attr(attr-con);
         position: relative;
         padding: 0;
         line-height: 0.1rem;
-        border-width: 0 99vw;
+        //border-width: 0 99vw;
         width: fit-content;
     }
 }
 
 @media (max-width:1024px) {
-    .container{
+    .container {
         margin: 0 8%;
-    }
-    .container, .container h1, .container h2, .container h3, .container h4{
         font-size: 120%;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-size: 120%;
+        }
     }
 }

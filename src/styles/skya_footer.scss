@@ -1,18 +1,23 @@
+@use "shared/cursors" as cursors;
+
 footer {
     position: relative;
     text-align: center;
     border-radius: 1.5rem;
     border: 2px dashed #2bad1a;
     color: #2bad1a;
-    font: 1rem "XTypeWriter-Bold";
+    font: 1rem "XTypeWriter-Bold", "fusion-pixel-Monospace";
     white-space: wrap;
-    cursor: pointer;
     margin: 5% auto 0;
     padding: 1%;
     width: 75%;
 
-    .auguroz_footer {
-        font: 0.9rem "PixeloidSans-Regular", 'Consolas';
+    &:hover{
+        cursor: cursors.$pointer;
+    }
+
+    .augurozFooter {
+        font: 0.9rem "PixeloidSans-Regular", "Consolas", "fusion-pixel-Monospace";
         text-align: center;
     }
 }

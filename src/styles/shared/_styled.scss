@@ -1,4 +1,6 @@
+@use "colors" as colors;
+
 ::selection{
-    background-color: #2bad1a;
-    color: #dad;
+    background-color: colors.$highlight-color;
+    color: colors.$link-visited;
 }

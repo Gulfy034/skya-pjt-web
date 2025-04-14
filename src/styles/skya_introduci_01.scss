@@ -1,23 +1,26 @@
+@use "shared/animation";
+@use "shared/cursors" as cursors;
+
 code#spanOne {
     border-collapse: collapse;
     border: 0.1rem solid;
     border-radius: 0.5rem;
-    font: 1.5rem "Consolas", "PublicPixel";
-    cursor: pointer;
+    font: 1.5rem "PixeloidSans-Regular";
+    cursor: cursors.$pointer;
 
     &:hover {
         border-color: #2bad1a;
         color: #2bad1a;
-        animation: commHover 0.2s forwards;
+        animation: elementsHoverOne 0.2s forwards;
     }
 
     &:not(:hover) {
-        animation: commOutHover 0.5s forwards;
+        animation: elementsOutHoverOne 0.5s forwards;
     }
 
     &:active {
         border-color: #f3f3f3;
         color: #f3f3f3;
-        animation: mousePushed 0.25s forwards;
+        animation: elementsClick 0.25s forwards;
     }
 }

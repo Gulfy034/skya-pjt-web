@@ -1,16 +1,30 @@
+@use "shared/animation";
+@use "shared/buttons";
+@use "shared/cursors"as cursors;
+@use "shared/layers" as layers;
+
+// TODO: navBtns' styles move to skya_button
+
 header#header {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: layers.$common;
 }
 
 /*-----nav part*/
 
 nav#navbox {
-    
-    border: 1px solid #14285700;
+
+    border: 1px solid #142857;
     border-radius: 5px;
-    background-color: #285714;
+    background-color: transparent;
+    background-image: radial-gradient(#285714 60%, transparent 0.5px),
+        radial-gradient(#000, transparent 1px);
+    background-size: 4px 4px;
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(#000 60%, #285714 100%);
+    opacity: 1;
+
     border-collapse: collapse;
     display: grid;
     grid-auto-flow: row;
@@ -18,11 +32,11 @@ nav#navbox {
     text-wrap: wrap;
 
     &:hover {
-        animation: navInHover 0.35s forwards;
+        animation: elementsHoverOne 0.35s forwards;
     }
 
     &:not(:hover) {
-        animation: navOutHover 0.5s forwards;
+        animation: elementsOutHoverOne 0.5s forwards;
     }
 
     ul {
@@ -37,180 +51,11 @@ ul.firstul {
     padding-inline-start: 0;
     box-shadow: 2rem 4rem 4rem #00000033;
     border-radius: 0.5rem;
-
-    .navbtn {
-        list-style: none;
-        border-radius: 3px;
-        border-top: 2px solid;
-        border-left: 2px solid;
-        box-shadow: 1rem 2rem 2rem #00000033;
-        color: #28145757;
-        border-color: #2bad1a;
-        background-color: #285714;
-        text-decoration: none;
-        text-align: center;
-        margin: 0 0.35rem;
-        padding: 0.2rem;
-        font: 1.75rem "PublicPixel", 'Consolas';
-
-        /* This should be shown as similar as mobile phones, so 'Consolas' fontfamliy will not gonna works */
-        /* added a similar font to make it a great view.*/
-        &:hover {
-            animation: navTex1_Inhov 0.35s forwards;
-            cursor: pointer;
-        }
-
-        &:not(:hover) {
-            animation: navTex1_Outhov 0.25s forwards;
-        }
-
-        &:active {
-            box-shadow: inset 5px 5px 5px #00000030,
-                inset -5px -5px 5px #00000036;
-            animation: click_ani 0.35s forwards;
-        }
-    }
 }
 
 /*-----nav BUTTOM part*/
 
 ul.secondul {
     box-shadow: 1rem 2rem 2rem #00000033;
-
-    .navbtnT {
-        margin: 0 0.35rem;
-        padding: 0.2rem;
-        color: #2bad1a;
-        background-color: #281457;
-        border: 2px solid;
-        cursor: pointer;
-        font: 1.5rem "PublicPixel", 'Consolas';
-        text-decoration: none;
-
-        &:hover {
-            animation: navTex2_Inhov 0.35s forwards;
-        }
-
-        &:not(:hover) {
-            animation: navTex2_Outhov 0.25s forwards;
-        }
-
-        &::after {
-            text-decoration: line-through;
-        }
-    }
-
-}
-
-/*-----animations Part*/
-
-@keyframes navTex1_Inhov {
-    0% {
-        color: #281457;
-    }
-
-    25% {
-        color: #dad;
-    }
-
-    100% {
-        color: #571428;
-        background-color: #2bad1a;
-    }
-}
-
-@keyframes navTex1_Outhov {
-    0% {
-        color: #571428;
-    }
-
-    16%,
-    25%,
-    35%,
-    65% {
-        color: #285714;
-    }
-
-    32%,
-    30%,
-    45%,
-    75% {
-        color: #50b027;
-    }
-
-    100% {
-        color: #281457;
-    }
-}
-
-/*nav BUTTOM status ani*/
-
-@keyframes navTex2_Inhov {
-    0% {
-        color: #2bad1a;
-    }
-
-    100% {
-        background-color: #2bad1a;
-        color: #571428;
-    }
-}
-
-@keyframes navTex2_Outhov {
-    0% {
-        color: #571428;
-        border-color: #285714;
-    }
-
-    15%,
-    25%,
-    35%,
-    65% {
-        border-color: #2bad1a;
-    }
-
-    20%,
-    30%,
-    45%,
-    75% {
-        border-color: #285714;
-    }
-
-    100% {
-        color: #2bad1a;
-        border-color: #2bad1a;
-    }
-
-}
-
-@keyframes navTex2_click {
-    100% {
-        border-color: #2bad1a;
-    }
-}
-
-/*nav ITSELF status ani*/
-
-@keyframes navInHover {
-    0% {
-        border-color: none;
-        filter: grayscale(80%);
-    }
-
-    100% {
-        border-color: #2bad1a;
-        filter: grayscale(0%);
-    }
-}
-
-@keyframes navOutHover {
-    0% {
-        border-color: #2bad1a;
-        filter: grayscale(0%);
-    }
-
-    100% {
-        border-color: none;
-        filter: grayscale(80%)
-    }
+    width: 30vw;
 }

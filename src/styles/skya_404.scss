@@ -1,8 +1,8 @@
-@use 'skya_loading';
-@use 'shared/cursor';
-@use 'shared/fonts';
-@use 'shared/animation';
+@use "shared/layers" as layers;
+@use "shared/fonts";
+@use "shared/animation";
 
+@use "skya_loading";
 body {
     grid-template-areas:
         "header"
@@ -15,9 +15,9 @@ header {
     row-gap: 35px;
     color: #bababa;
 
-    #bgPart {
+    #background {
         animation: bg_ani 2s infinite;
-        z-index: -1;
+        z-index: layers.$background;
     }
 
     .skyaTitle {
@@ -28,7 +28,7 @@ header {
 
     .title {
         text-align: center;
-        font: 2.5rem "PixeloidSans-Regular";
+        font: 2.5rem "PixeloidSans-Regular", "fusion-pixel-Monospace";
         margin: 3rem auto;
         font-size: clamp(2.5rem, 2vw, 3rem);
         color: #2bad1a;
@@ -46,12 +46,12 @@ main {
 
     span {
         text-align: left;
-        font: 600 1rem 'SKYA_Title-pixel_demo';
+        font: 600 1rem "SKYA_Title-pixel_demo";
         color: #2bad1a;
     }
 
     .output {
-        font: 1rem "PixeloidSans-Regular", 'Consolas', 'Cascadia';
+        font: 1rem "PixeloidSans-Regular", "Consolas", "Cascadia", "fusion-pixel-Monospace";
         color: #2bad1a57;
     }
 }

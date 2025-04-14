@@ -1,9 +1,11 @@
 import React, { useState, useTransition } from "react";
-import IntrOne from '@components/skya_introduci_01';
-import IntrTwo from '@components/skya_introduci_02';
-import IntrThree from '@components/skya_introduci_03';
-import IntrFour from '@components/skya_introduci_04';
-import '@styles/skya_introduci.scss';
+
+import IntrOne from "@components/skya_introduci_01";
+import IntrTwo from "@components/skya_introduci_02";
+import IntrThree from "@components/skya_introduci_03";
+import IntrFour from "@components/skya_introduci_04";
+
+import "@styles/skya_introduci.scss";
 
 //TODO: animated tranisition while router changed
 //TODO: i18n localize
@@ -16,7 +18,7 @@ export default function Introduci() {
                 <hr className="hr_conf" attr-con="users ! welcome" />
             </div>
 
-            <section className="aa">
+            <section>
                 <IntrOne />
             </section>
 
@@ -24,7 +26,7 @@ export default function Introduci() {
                 <hr className="hr_conf" attr-con="introduce ? what" />
             </div>
 
-            <section className="bb">
+            <section>
                 <IntrTwo />
             </section>
 
@@ -32,7 +34,7 @@ export default function Introduci() {
                 <hr className="hr_conf" attr-con="something ~ else" />
             </div>
 
-            <section className="cc">
+            <section>
                 <IntrThree />
             </section>
 
@@ -40,7 +42,7 @@ export default function Introduci() {
                 <hr className="hr_conf" attr-con="board - notes" />
             </div>
 
-            <section className="dd">
+            <section>
                 <IntrFour />
             </section>
         </div>

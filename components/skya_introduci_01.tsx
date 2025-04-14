@@ -1,28 +1,27 @@
-import React from "react";
-import gsap from "gsap";
-//import { playVsfxOne } from '@components/skya_playsfx.jsx';
-//import '@components/languageSet';
-//import { imgToAscii } '@hooks/use-imgToAscii';
-import '@styles/skya_introduci_01.scss';
+import { Trans, useTranslation } from "react-i18next";
+//import { playVsfxOne } from "@components/skya_playsfx.jsx"
+
+import "@styles/skya_introduci_01.scss";
 
 
 //TODO: i18n localize
 export default function IntrOne() {
-    return(
-    <>
-        <div id="subTitleOne">
-            <h3 id="contTitleOne">~ the SKYA-Project-Website is &nbsp;
-                <code id="spanOne" /*onClick={playVsfxOne} */ >'opening'</code>
-                &nbsp; for everyBODY!
-            </h3>
-        </div>
-
-        <div>
-            <h4>this is a asbjdjabsdoiaosfj</h4>
-            <p>12121212</p>
-            <p>12121212</p>
-            <p>12121212</p>
-            <p>12121212</p>
-        </div>
-    </>
-);}
+    const { t } = useTranslation(["contents"]);
+    return (
+        <>
+            <div id="sectionOne">
+                <h3 id="subTitleOne">
+                    <Trans
+                        i18nKey={"contents"}
+                        components={{
+                            codeOne: <code id="spanOne" /*onClick={playVsfxOne}*/ />,
+                        }}>
+                        {t("title.sectionTitleOne")}
+                    </Trans>
+                </h3>
+                <h4>{t("title.subTitleOne")}</h4>
+                <p>{t("content.intrOne")}</p>
+            </div>
+        </>
+    );
+}

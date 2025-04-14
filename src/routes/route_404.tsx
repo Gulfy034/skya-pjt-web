@@ -1,35 +1,43 @@
-// @ts-nocheck
-import { useEffect } from 'react';
-import Title from '@components/skya_title';
-//import BgPart from '@components/skya_bgPart';
-import { SkyaBtnErr } from '@components/skya_button';
-import { GlitchSvg } from '@components/skya_filters';
-import Footer from '@components/skya_footer';
-//import DbgOutputStatus '@components/skya_debugging';
+import { useEffect } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
+import Title from "@components/skya_title";
+//import Background from "@components/shared/skya_background";
+import Footer from "@components/skya_footer";
+import { SkyaBtnErr } from "@components/shared/skya_button";
+import { GlitchEff } from "@components/shared/skya_filters";
 
-//TODO: i18n required
-import '@styles/skya_404.scss';
+import "@styles/skya_404.scss";
 
 export default function Error404Page() {
+  const { t } = useTranslation(["errors"]);
   useEffect(() => {
-    document.title = 'Oh-HO 404!';
+    document.title = t("label");
   }, []);
 
   return (
     <>
-      <GlitchSvg />
-      
+      <GlitchEff />
+
 
       <header>
-        <h1 className="title">~ Ey! Nothing here! ~</h1>
+        <h1 className="title">{t("title")}</h1>
         <Title />
       </header>
 
       <main>
 
-        <span>output:</span>
-        <p className="output"><span>~#</span> can't found any pages matches you have typed !</p>
+        <span>{t("main.part1")}</span>
+        <p className="output">
+          <Trans
+            i18nKey={"main"}
+            components={{
+              span: <span/>
+            }}
+            >
+            {t("main.part2")}
+          </Trans>
+        </p>
         <SkyaBtnErr />
 
       </main>

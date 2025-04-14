@@ -1,4 +1,4 @@
-// TODO: add more svg styles
+// TODO: add more cursor styles
 
 /*
 auto | default | none | context-menu 
@@ -12,8 +12,9 @@ all-scroll | zoom-in | zoom-out | grab | grabbing
 $default : url("/imgs/SKYA_Website_Cursor-default_Simplify.svg"), default;
 //$wait: url("/imgs/SKYA_Website_Cursor-wait_Simplify.svg"), wait;
 $pointer: url("/imgs/SKYA_Website_Cursor-pointer_Simplify.svg"), pointer;
-//cursor: url("/imgs/SKYA_Website_Cursor-notallowed_Simplify.svg"), not-allowed;
-//cursor: url("/imgs/SKYA_Website_Cursor-progress_Simplify.svg"), progress;
-//cursor: url("/imgs/SKYA_Website_Cursor-text_Simplify.svg"), text;
-//cursor: url("/imgs/SKYA_Website_Cursor-grab_Simplify.svg"), grab;
-//cursor: url("/imgs/SKYA_Website_Cursor-grabbing_Simplify.svg"), grabbing;
+//$notAllowed url("/imgs/SKYA_Website_Cursor-notAllowed_Simplify.svg"), not-allowed;
+//$progress: url("/imgs/SKYA_Website_Cursor-progress_Simplify.svg"), progress;
+//$text: url("/imgs/SKYA_Website_Cursor-text_Simplify.svg"), text;
+//$grab: url("/imgs/SKYA_Website_Cursor-grab_Simplify.svg"), grab;
+//$grabbing: url("/imgs/SKYA_Website_Cursor-grabbing_Simplify.svg"), grabbing;
+//$allScroll: url("/imgs/SKYA_Website_Cursor-allScroll_Simplify.svg"), all-scroll;
