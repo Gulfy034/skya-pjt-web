@@ -4,6 +4,6 @@
     "notfound": "404-not-found !",
     "main": {
         "part1": "output:",
-        "part2": "<span>~#</span> can't found any pages matches you have typed !"
+        "part2": "~# can't found any pages matches you have typed !"
     }
 }
