@@ -1,33 +1,40 @@
 // @ts-nocheck
-import { Suspense, useEffect } from 'react';
-import { ReactLenis } from 'lenis/react';
-import Header from '@components/skya_header';
-import Title from '@components/skya_title';
-import Introduci from '@components/skya_introduci';
-import Footer from '@components/skya_footer';
-import Scrollbar from '@components/skya_scrollbar';
-import Loading from '@components/skya_loading';
+import { Suspense, useEffect } from "react";
+import { ReactLenis } from "lenis/react";
+import { useTranslation } from "react-i18next";
 
-import '@styles/index.scss';
+import Header from "@components/skya_header";
+import Title from "@components/skya_title";
+import Introduci from "@components/skya_introduci";
+import Footer from "@components/skya_footer";
 
-//TODO: i18n required
+import ScrollProgress from "@components/shared/skya_scrollbar";
+import Loading from "@components/shared/skya_loading";
 
-//const LazyBg = lazy(() => import('@components/skya_bgPart'));
+import "@styles/index.scss";
+
+//TODO: lazyload components
 
 export default function IndexPage() {
+  const { t } = useTranslation(["home"]);
   useEffect(() => {
-    document.title = 'Welcome-to-[SKYA-Project]-website!'
+    document.title = t("welcome");
   }, []);
 
   return (
     <>
       <Suspense fallback={<Loading />}>
 
-        <header id='header'>
+        <header id="header">
           <Header />
+          <ScrollProgress />
         </header>
 
-        <ReactLenis root>
+        <ReactLenis
+          options={{
+            syncTouch: true,
+          }}
+          root>
 
           <main>
             <Title />
@@ -35,8 +42,6 @@ export default function IndexPage() {
           </main>
 
           <Footer />
-
-          <Scrollbar />
 
         </ReactLenis>
       </Suspense>
