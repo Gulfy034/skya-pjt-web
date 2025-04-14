@@ -30,7 +30,7 @@ export function DbgOutputNetwork() {
 }
 
 //----- force device is mobile
-renderDebugging.isMobile == true;
+export const forceMobile = renderDebugging.isMobile == true;
 
 //----- router status
 export function DbgOutputRouter() {
