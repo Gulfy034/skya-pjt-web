@@ -9,7 +9,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 //---404---//
 
-@keyframes bg_ani {
+@keyframes bgAni {
 
     from,
     to {
@@ -30,7 +30,8 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     from {
         opacity: 0.2;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
@@ -38,11 +39,22 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 //---elements---//
 
 @keyframes elementsAppear {
-    
+    from {
+        opacity: 0.15;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes elementsDisappear {
-    
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0.15;
+    }
 }
 
 
@@ -51,6 +63,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
         opacity: 0.65;
         filter: grayscale(75%);
     }
+
     15%,
     25%,
     35%,
@@ -62,8 +75,9 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     30%,
     45%,
     75% {
-        border-color: #285714;
+        border-color: colors.$error-color;
     }
+
     100% {
         opacity: 1;
         border-color: colors.$highlight-color;
@@ -82,6 +96,43 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 }
 
+@keyframes elementsHoverTwo {
+    0% {
+        opacity: 0.65;
+        filter: grayscale(0.75);
+    }
+
+    15%,
+    25%,
+    35%,
+    65% {
+        background-color: colors.$highlight-color;
+    }
+
+    20%,
+    30%,
+    45%,
+    75% {
+        background-color: colors.$error-color;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: colors.$highlight-color;
+    }
+}
+
+@keyframes elementsOutHoverTwo {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.65;
+        filter: grayscale(0.75)
+    }
+}
+
 @keyframes elementsClick {
     from {
         opacity: 1;
@@ -96,40 +147,40 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 @keyframes navTex1_Inhov {
     0% {
-        color: #281457;
+        color: colors.$error-color;
     }
 
     25% {
-        color: #dad;
+        color: colors.$link-visited;
     }
 
     100% {
-        color: #571428;
-        background-color: #2bad1a;
+        color: colors.$fatal-color;
+        background-color: colors.$highlight-color;
     }
 }
 
 @keyframes navTex1_Outhov {
     0% {
-        color: #571428;
+        color: colors.$fatal-color;
     }
 
     16%,
     25%,
     35%,
     65% {
-        color: #285714;
+        color: colors.$error-color;
     }
 
     32%,
     30%,
     45%,
     75% {
-        color: #50b027;
+        color: colors.$sharp-green;
     }
 
     100% {
-        color: #281457;
+        color: colors.$info-color;
     }
 }
 
@@ -137,45 +188,45 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 @keyframes navTex2_Inhov {
     0% {
-        color: #2bad1a;
+        color: colors.$highlight-color;
     }
 
     100% {
-        background-color: #2bad1a;
-        color: #571428;
+        background-color: colors.$highlight-color;
+        color: colors.$fatal-color;
     }
 }
 
 @keyframes navTex2_Outhov {
     0% {
-        color: #571428;
-        border-color: #285714;
+        color: colors.$fatal-color;
+        border-color: colors.$error-color;
     }
 
     15%,
     25%,
     35%,
     65% {
-        border-color: #2bad1a;
+        border-color: colors.$highlight-color;
     }
 
     20%,
     30%,
     45%,
     75% {
-        border-color: #285714;
+        border-color: colors.$error-color;
     }
 
     100% {
-        color: #2bad1a;
-        border-color: #2bad1a;
+        color: colors.$highlight-color;
+        border-color: colors.$highlight-color;
     }
 
 }
 
 @keyframes navTex2_click {
     100% {
-        border-color: #2bad1a;
+        border-color: colors.$highlight-color;
     }
 }
 
@@ -188,14 +239,14 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     100% {
-        border-color: #2bad1a;
+        border-color: colors.$highlight-color;
         filter: grayscale(0%);
     }
 }
 
 @keyframes navOutHover {
     0% {
-        border-color: #2bad1a;
+        border-color: colors.$highlight-color;
         filter: grayscale(0%);
     }
 

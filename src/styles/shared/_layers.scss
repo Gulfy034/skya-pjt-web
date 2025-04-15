@@ -1,3 +1,4 @@
+@use "colors" as colors;
 /*
 This file is used to clearify the layers about
 EVERY mentioned components.
@@ -5,6 +6,35 @@ Usage:
 1. @use "shared/layers" as layers
 2. layers.$variable
 */
+
+/*
+@page {
+    size: 100vh 100vw;
+    border: 2px solid colors.$highlight-color;
+    margin: 2px;
+    @bottom {
+        content: "Page" counter(pageNum);
+    }
+}
+*/
+
+@layer intro {
+    canvas.intro {
+        position: fixed;
+    }
+}
+
+@layer webpage {
+    div#layout {
+        display: inherit;
+    }
+}
+
+@layer background {
+    .bg {
+        position: fixed;
+    }
+}
 
 $background: -1; // canvas background
 $common: 1; // nav banner div

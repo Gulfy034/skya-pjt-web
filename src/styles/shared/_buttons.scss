@@ -1,11 +1,12 @@
 @use "animation";
+@use "colors" as colors;
 @use "cursors" as cursors;
 
 .skyaBtnD,
 .skyaBtnE {
-    color: #2bad1a;
+    color: colors.$highlight-color;
     font: 20px "XTypeWriter-Bold", "fusion-pixel-Monospace";
-    background-color: #13131313;
+    background-color: colors.$global-color;
     border: 3px solid;
     margin: 7% auto 10%;
     border-radius: 4px;
@@ -14,7 +15,7 @@
 
     a {
         text-decoration: none;
-        color: #2bad1a;
+        color: colors.$highlight-color;
     }
 
     &:hover {
@@ -28,94 +29,5 @@
 
     &:active {
         animation: btn_Click 0.4s forwards;
-    }
-}
-
-.navbtn {
-    list-style: none;
-    border-radius: 3px;
-    border-top: 2px solid;
-    border-left: 2px solid;
-    box-shadow: 1rem 2rem 2rem #00000033;
-    color: #28145757;
-    border-color: #2bad1a;
-    background-color: transparent;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 0.35rem;
-    padding: 0.2rem;
-    font: 1.75rem "PublicPixel", "Consolas", "fusion-pixel-Monospace";
-
-    /* This should be shown as similar as mobile phones, so "Consolas" fontfamliy won"t gonna works */
-    /* added a similar font to make it a great view.*/
-    &:hover {
-        animation: navTex1_Inhov 0.35s forwards;
-        cursor: cursors.$pointer;
-        
-    }
-
-    &:not(:hover) {
-        animation: navTex1_Outhov 0.25s forwards;
-    }
-
-    &:active {
-        box-shadow: inset 5px 5px 5px #00000030,
-            inset -5px -5px 5px #00000036;
-        animation: elementsClick 0.35s forwards;
-    }
-}
-
-.navbtnT {
-    margin: 0 0.35rem;
-    padding: 0.2rem;
-    color: #2bad1a;
-    background-color: #281457;
-    border: 2px solid;
-    
-    font: 1.5rem "PublicPixel", "Consolas", "fusion-pixel-Monospace";
-    text-decoration: none;
-
-    &:hover {
-        animation: navTex2_Inhov 0.35s forwards;
-        cursor: cursors.$pointer;
-    }
-
-    &:not(:hover) {
-        animation: navTex2_Outhov 0.25s forwards;
-    }
-
-    &::after {
-        text-decoration: line-through;
-    }
-}
-
-
-@keyframes btn_inHover {
-    0% {
-        scale: 1.05;
-    }
-
-    100% {
-        scale: 1;
-    }
-}
-
-@keyframes btn_outHover {
-    0% {
-        scale: 1;
-    }
-
-    100% {
-        scale: 1.05;
-    }
-}
-
-@keyframes btn_Click {
-    0% {
-        scale: 1;
-    }
-
-    100% {
-        scale: 0.85;
     }
 }
