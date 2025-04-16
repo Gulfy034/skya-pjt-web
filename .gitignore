@@ -6,7 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-*.tsbuildinfo
 
 # blackhole
 node_modules
@@ -17,8 +16,10 @@ dist-ssr
 # Failsafe backup files
 backup
 
-# converted
+# -old- Building files
+*.tsbuildinfo
 vite.config.js
+vite.config.d.ts
 
 # Editor directories and files
 .vscode/*

@@ -1,32 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "ES2024",// this is radical
-    "useDefineForClassFields": true,
-    "lib": ["ES2024", "DOM", "DOM.Iterable"],// such radical omg
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "baseUrl": "./",//modified
-    "paths": {
-      "@styles/*": ["src/styles/*"],
-      "@components/*": ["components/*"],
-    },
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",//added
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src"],//added
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
