@@ -6,10 +6,12 @@
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "module": "ESNext",
         "skipLibCheck": true,
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
             "@styles/*": ["src/styles/*"],
             "@components/*": ["components/*"],
+            "@hooks/*": ["hooks/*"],
+            "@tests": ["tests/*"]
         },
 
         /* Bundler mode */
