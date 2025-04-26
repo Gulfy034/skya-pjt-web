@@ -1,5 +1,5 @@
 {
-    "name": "skya-web",
+    "name": "skya-project-website",
     "compatibility_date": "2025-04-26",
     "assets": {
         "directory": "./dist"
