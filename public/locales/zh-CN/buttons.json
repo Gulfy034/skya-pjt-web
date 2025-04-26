@@ -3,5 +3,6 @@
     "default": "默认按钮",
     "404back": "回到主页面！",
     "submit": "确认",
-    "cancel": "取消"
+    "cancel": "取消",
+    "kill": "关闭浏览器"
 }

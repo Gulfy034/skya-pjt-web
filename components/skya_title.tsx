@@ -1,76 +1,54 @@
-import React, { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import Typed from "typed.js";
-import gsap from "gsap";
-import '@styles/skya_title.scss';
+
+import "@styles/skya_title.scss";
+
+// TODO: let it more stylish
 
 function TitleTyped() {
-    const ref = React.useRef(null);
-    React.useEffect(() => {
-        const typedOne = new Typed(ref.current, {
-            strings: ['SKYA_PROJECT'],
+    const typedRef = useRef(null);
+    const { t } = useTranslation(["elements"]);
+
+    useEffect(() => {
+        const typedOne = new Typed(typedRef.current, {
+            strings: [t(`monitor.normal.one`), t(`monitor.normal.two`), t(`monitor.normal.three`)],
             typeSpeed: 35,
+            showCursor: false,
         });
         return () => {
             typedOne.destroy();
         };
     }, []);
-    return (
-        <>
-            <p id="skyaTitleText" className="skyaTitleText" ref={ref} />
-        </>
-    )
+    return <p id="skyaTitleText" className="skyaTitleText" ref={typedRef} />
 }
 
 function ErrorTyped() {
-    const ref = React.useRef(null);
-    React.useEffect(() => {
-        const typedOne = new Typed(ref.current, {
-            strings: ['SKYA_ERROR', '404_NOT_FOUND'],
-            typeSpeed: 50,
+    const typedRef = useRef(null);
+    const { t } = useTranslation(["elements"]);
 
+    useEffect(() => {
+        const typedOne = new Typed(typedRef.current, {
+            strings: [t(`monitor.errors.show`), t(`monitor.errors.notfound`)],
+            typeSpeed: 50,
+            showCursor: false
         });
         return () => {
             typedOne.destroy();
         };
     }, []);
-    return (
-        <>
-            <p id="errTitleText" className="errTitleText" ref={ref} />
-        </>
-    )
+    return <p id="skyaTitleText" className="errTitleText" ref={typedRef} />
 }
 
 //TODO: make a list of recorded pathname
-//TODO: animate it and i18n
 
 export default function Title() {
-    const isIndex = useLocation();
-    const titleTl = useRef();
-    const titleContainer = useRef();
-
-    useLayoutEffect(() => {
-        const titlectx = gsap.context(() => {
-            titleTl.current = gsap.timeline()
-                .from("#skyaTitleText", {
-                    x: -100,
-                    skewY: -15,
-                    duration: 0.75,//seconds
-                })
-                .from("#errTitleText", {
-                    y: -120,
-                    duration: 2,//seconds
-                })
-        }, titleContainer);
-        return () => titlectx.revert();
-    }, []);
+    const path = useLocation();
     return (
-        <div className="skyaTitle" ref={titleContainer}>
-            {
-                isIndex.pathname == '/' | '/Download' | '/About' | '/Contect'
-                    ? (<TitleTyped />)
-                    : (<ErrorTyped />)
-            }
+        <div className="skyaTitle" >
+            { path.pathname == "/404" ? (<ErrorTyped />) : (<TitleTyped />) }
         </div>
     )
 }

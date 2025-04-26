@@ -1,47 +1,36 @@
+@use "shared/layers" as layers;
+@use "shared/cursors" as cursors;
+@use "shared/colors" as colors;
+@use "shared/animation";
+
 div.skyaTitle {
-    position: relative;
-    font-family: "SKYA_Title-Pixel_demo";
-    text-align: center;
-    //padding-left: 2%;
-    animation: SKYA_title_loaded 0.5s forwards;
-    border: 2px dashed;
-    border-radius: 7px;
-    margin: 10% auto;
-    cursor: pointer;
+    position: sticky;
     overflow-y: hidden;
     text-wrap: wrap;
-    height: 8.7rem;
-    width: 500px;
+    font: 5vw "SKYA_Title-Pixel_demo";
+    text-align: center;
+    color: colors.$highlight-color;
+    border: 2px dashed;
+    border-radius: 7px;
+    z-index: layers.$background;
+    animation: SKYA_title_loaded 0.5s forwards;
     box-shadow: -1px -1px 1rem;
 
+    &.mobile{
+        width: 100%;
+        padding-left: 2%;
+    }
     &:hover {
-        animation: SKYA_title_inHover 0.5s forwards;
+        cursor: cursors.$pointer;
+        animation: skyaTitleHover 0.5s forwards;
     }
 
     &:not(:hover) {
-        animation: SKYA_title_outHover 0.5s forwards;
+        animation: skyaTitleOutHover 0.5s forwards;
     }
 
     &:active {
-        animation: SKYA_title_onClick 0.35s forwards ease-in-out;
+        animation: skyaTitleClick 0.35s forwards ease-in-out;
     }
 
-}
-
-@media (min-width:420px) and (max-width:540px) {
-    .skyaTitle {
-        scale: 1 - 0.05;
-    }
-}
-
-@media (min-width:200px) and (max-width:420px) {
-    .skyaTitle {
-        scale: 1 - 0.15;
-    }
-}
-
-@media (max-width:200px) {
-    .skyaTitle {
-        scale: 1 - 0.25;
-    }
 }

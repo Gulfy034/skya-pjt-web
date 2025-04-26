@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import Title from "@components/skya_title";
-//import Background from "@components/shared/skya_background";
 import Footer from "@components/skya_footer";
 import { SkyaBtnErr } from "@components/shared/skya_button";
 import { GlitchEff } from "@components/shared/skya_filters";

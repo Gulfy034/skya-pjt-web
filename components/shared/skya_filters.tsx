@@ -1,4 +1,4 @@
-export function GlitchEff () {
+export function GlitchEff() {
     return (
         <>
             <svg className="hiddenFilter">

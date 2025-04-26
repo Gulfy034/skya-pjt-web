@@ -3,5 +3,6 @@
     "default": "default button",
     "404back": "Take me to the main page!",
     "submit": "SUBMIT",
-    "cancel": "CANCEL"
+    "cancel": "CANCEL",
+    "kill": "KILLBROWSER"
 }

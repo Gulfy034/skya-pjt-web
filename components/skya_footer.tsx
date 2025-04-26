@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -8,7 +7,7 @@ import "@styles/skya_footer.scss";
 //TODO: need more stylish changes
 
 function IndexFooter() {
-    const { t } = useTranslation(["footers"]);
+    const { t } = useTranslation(["footers", "copyright"]);
     return (
         <footer>
             <div className="mainfoot">
@@ -18,13 +17,13 @@ function IndexFooter() {
                     <Trans
                         i18nKey={"part2"}
                         components={{
-                            CloudflareLink: <Link to={"https://cloudflare.com"} />
+                            CloudflareLink: <Link to={"https://cloudflare.com"} />,
+
                         }}
                     >
                         {t("common.part2")}
                     </Trans>
-                </p>
-                <p>
+                        &nbsp;|&nbsp;
                     <Trans
                         i18nKey={"part3"}
                         components={{
@@ -34,18 +33,28 @@ function IndexFooter() {
                         {t("common.part3")}
                     </Trans>
                 </p>
+                <p>
+                    <Trans
+                    i18nKey={"copyright"}
+                    components={{
+                        Copyright: <span>&copy;</span>,
+                        Cite: <cite/>
+                    }}>
+                        {t("copyright:copyright")}
+                    </Trans>
+                </p>
             </div>
         </footer>
     )
 }
 
 function ErrorFooter() {
-    const { t } = useTranslation(["footer"]);
+    const { t } = useTranslation(["footers"]);
     return (
         <footer>
             <div className="augurozFooter">
                 <Trans
-                    i18nKey={"main"}
+                    i18nKey={"footers"}
                     components={{
                         span: <span />
                     }}
@@ -59,9 +68,5 @@ function ErrorFooter() {
 
 export default function Footer() {
     const location = useLocation();
-    return (
-        location.pathname == "/" || "/Download" || "/About" || "/Contect"
-            ? (<IndexFooter />)
-            : (<ErrorFooter />)
-    )
+    return location.pathname == "/404" ? (<ErrorFooter />) : (<IndexFooter />);
 }

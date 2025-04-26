@@ -1,4 +1,8 @@
+@use "shared/layers" as layers;
+@use "shared/colors" as colors;
+
 #loading{
-    background-color: black;
-    z-index: 4;
+    background-color: colors.$dark-shadow2;
+    z-index: layers.$common;
+    font: auto "consolas" "fusion-pixel-Monospace";
 }

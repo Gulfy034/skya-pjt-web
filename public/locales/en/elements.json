@@ -1,0 +1,22 @@
+{
+    "monitor": {
+        "normal": {
+            "one": "suno-koncated",
+            "two": "yet another project",
+            "three": "SKYA_PROJECT"
+        },
+        "errors": {
+            "show": "SKYA_ERROR",
+            "notfound": "NOT_FOUND"
+        }
+    },
+    "modal":{
+        "title":{
+            "langSelect": "Choose Your Language",
+            "feedSelect": "Choose Your RSS Feed Resource"
+        },
+        "content":{
+            "langSelect": "<LangList>zh-CN</LangList>"
+        }
+    }
+}

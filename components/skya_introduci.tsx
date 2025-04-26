@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+//import React, { useState, useTransition } from "react";
 
 import IntrOne from "@components/skya_introduci_01";
 import IntrTwo from "@components/skya_introduci_02";

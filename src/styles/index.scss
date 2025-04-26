@@ -1,25 +1,55 @@
 @use "shared/background";
 @use "shared/fonts";
+@use "shared/icons";
 @use "shared/styled";
 @use "shared/cursors" as cursors;
+@use "shared/colors" as colors;
 @use "shared/animation";
 
 @use "skya_loading";
 
-* {
+/*@media (prefers-color-scheme: dark) {
+    
+}*/
+
+:root {
+    color-scheme: dark only;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
-    -webkit-user-modify: read-only;
+
+    a {
+
+        &:link,
+        &:visited {
+            color: colors.$link-visited;
+        }
+
+        &:hover {
+            color: colors.$sharp-green;
+        }
+    }
+
+    * {
+        transition: all 50ms ease-out;
+
+        &:focus {
+            outline: 5px solid colors.$section-color;
+        }
+
+        &:not(:focus){
+            outline: 0 solid colors.$section-color;
+        }
+    }
 }
 
 body {
-    color-scheme: dark;
-    //object-fit: contain;
+    object-fit: contain;
     white-space: wrap;
     margin: 0 1px;
-    overflow-x: hidden;/* Very important */
+    overflow-x: hidden;
+    /* Very important */
     scroll-behavior: smooth;
     cursor: cursors.$default;
 }
@@ -51,7 +81,8 @@ footer {
     &:not(:hover) {
         animation: elementsOutHoverOne 0.35s forwards;
     }
-    &:active{
+
+    &:active {
         animation: elementsClick 0.35s forwards;
     }
 }

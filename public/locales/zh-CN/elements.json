@@ -1,0 +1,22 @@
+{
+    "monitor": {
+        "normal": {
+            "one": "suno-koncated",
+            "two": "yet another project",
+            "three": "SKYA_PROJECT"
+        },
+        "errors": {
+            "show": "SKYA_ERROR",
+            "notfound": "NOT_FOUND"
+        }
+    },
+    "modal":{
+        "title":{
+            "langSelect": "选择你的语言",
+            "feedSelect": "选择你的RSS订阅源"
+        },
+        "content":{
+            "langSelect": "<LangList>中文（中国）</LangList>"
+        }
+    }
+}

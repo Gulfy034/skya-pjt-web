@@ -52,7 +52,8 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0.15;
     }
 }
@@ -61,7 +62,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 @keyframes elementsHoverOne {
     0% {
         opacity: 0.65;
-        filter: grayscale(75%);
+        filter: grayscale(0.75);
     }
 
     15%,
@@ -92,7 +93,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
     100% {
         opacity: 0.65;
-        filter: grayscale(75%);
+        filter: grayscale(0.75);
     }
 }
 
@@ -143,9 +144,33 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 }
 
+@keyframes modalAppear {
+    0% {
+        transform: rotate3d(1, 0, 0, 90deg);
+        border-color: colors.$sharp-green;
+    }
+    16%,
+    25%,
+    35%,
+    65% {
+        border-color: colors.$error-color;
+    }
+
+    32%,
+    30%,
+    45%,
+    75% {
+        border-color: colors.$sharp-green;
+    }
+    100% {
+        transform: rotate3d(1, 1, 1, 0deg);
+        border-color: colors.$error-color;
+    }
+}
+
 //---nav---//
 
-@keyframes navTex1_Inhov {
+@keyframes navBtnInhov {
     0% {
         color: colors.$error-color;
     }
@@ -160,7 +185,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 }
 
-@keyframes navTex1_Outhov {
+@keyframes navBtnOuthov {
     0% {
         color: colors.$fatal-color;
     }
@@ -186,7 +211,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 /*nav BUTTOM status ani*/
 
-@keyframes navTex2_Inhov {
+@keyframes navBtnTInhov {
     0% {
         color: colors.$highlight-color;
     }
@@ -197,7 +222,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 }
 
-@keyframes navTex2_Outhov {
+@keyframes navBtnTOuthov {
     0% {
         color: colors.$fatal-color;
         border-color: colors.$error-color;
@@ -224,7 +249,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
-@keyframes navTex2_click {
+@keyframes navBtnTclick {
     100% {
         border-color: colors.$highlight-color;
     }
@@ -235,23 +260,23 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 @keyframes navInHover {
     0% {
         border-color: none;
-        filter: grayscale(80%);
+        filter: grayscale(0.8);
     }
 
     100% {
         border-color: colors.$highlight-color;
-        filter: grayscale(0%);
+        filter: grayscale(0);
     }
 }
 
 @keyframes navOutHover {
     0% {
         border-color: colors.$highlight-color;
-        filter: grayscale(0%);
+        filter: grayscale(0);
     }
 
     100% {
         border-color: none;
-        filter: grayscale(80%)
+        filter: grayscale(0.8)
     }
 }

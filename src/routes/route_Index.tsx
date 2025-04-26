@@ -1,6 +1,4 @@
-// @ts-nocheck
 import { Suspense, useEffect } from "react";
-import { ReactLenis } from "lenis/react";
 import { useTranslation } from "react-i18next";
 
 import Header from "@components/skya_header";
@@ -28,22 +26,15 @@ export default function IndexPage() {
         <header id="header">
           <Header />
           <ScrollProgress />
+          <Title />
         </header>
 
-        <ReactLenis
-          options={{
-            syncTouch: true,
-          }}
-          root>
-
           <main>
-            <Title />
             <Introduci />
           </main>
 
           <Footer />
 
-        </ReactLenis>
       </Suspense>
     </>
   )

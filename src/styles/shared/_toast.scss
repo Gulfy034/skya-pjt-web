@@ -1,0 +1,63 @@
+@use "colors" as colors;
+@use "cursors" as cursors;
+@use "layers" as layers;
+
+.notification {
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font: auto "XTypeWriter-Bold", "fusion-pixel-Monospace";
+  z-index: layers.$elementsTop;
+
+  &.top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  &.top-left {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  &.bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  &.bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &.success {
+    background-color: colors.$highlight-color;
+  }
+  &.info {
+    background-color: colors.$info-color;
+  }
+  &.warning {
+    background-color: colors.$fatal-color;
+  }
+  &.error {
+    background-color: colors.$error-color;
+  }
+}
+
+.closeBtn {
+  margin-left: 5px;
+  
+  display: flex;
+  align-items: center;
+
+  &:hover{
+    cursor: cursors.$pointer;
+  }
+}

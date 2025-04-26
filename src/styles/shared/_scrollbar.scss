@@ -1,6 +1,6 @@
-@use "shared/colors" as colors;
-@use "shared/animation";
-@use "shared/layers" as layers;
+@use "colors" as colors;
+@use "animation";
+@use "layers" as layers;
 
 $currentScrollbarWidth: 8px;
 $currentScrollbarHeight: 1vh;
@@ -8,8 +8,11 @@ $currentScrollbarHeight: 1vh;
 
 /* full scrollbar */
 ::-webkit-scrollbar {
-    display: none; //rip default scrollbar ;>
-    //width: $currentScrollbarWidth;
+    display: none;
+}
+
+::-moz-progress-bar {
+    color: colors.$highlight-color;
 }
 
 div#scrollProgress{
@@ -25,11 +28,19 @@ div#scrollProgress{
     border-radius: 0 0 3px 3px;
     background-color: colors.$highlight-color;
 
-    ::before{
+    &::before{
         animation: elementsAppear forwards 200ms;
     }
 
-    ::after{
+    &::after{
         animation: elementsDisappear forwards 200ms;
+    }
+
+    &:hover{
+        animation: elementsHoverTwo forwards 200ms;
+    }
+
+    &:not(:hover){
+        animation: elementsOutHoverTwo forwards 200ms;
     }
 }

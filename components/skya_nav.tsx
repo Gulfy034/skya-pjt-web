@@ -2,18 +2,16 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { isMobile } from "react-device-detect";
+//import { isMobile } from "react-device-detect";
 
-//import { playsfxOne, playsfxTwo } from "@components/skya_playsfx";
-//import "@components/shared/skya_languageSet";
+//import { buttonSfx } from "@components/shared/skya_playsfx";
+import "@components/shared/skya_languageSet";
 import Smodal from "@components/shared/skya_floatwindow";
-import ButtonFeed from "@components/skya_feed";
+import ButtonFeeder from "@components/skya_feed";
 
 import "@styles/skya_nav.scss";
-
 //TODO: mobile detect => change this appearence.
-//TODO: test router buttons (eg. goto404, gotoAugruoz) should be removed.
-//TODO: localize text.
+//TODO: test router buttons should be removed.
 
 /*
 const RenderMobile = () => {
@@ -26,24 +24,10 @@ const RenderMobile = () => {
 */
 
 export default function Nav() {
-    const {t} = useTranslation(["nav"]);
-    // Control ModalWindow
+    const { t } = useTranslation(["nav"]);
     const [smodalVisible, setSmodalVisible] = useState(false);
-    const smodalControl = {
-        visible: smodalVisible,
-        closeMe: () => {
-            setSmodalVisible(false);
-        },
-    };
-
     return (
         <>
-            {createPortal(
-                <Smodal
-                    {...smodalControl}
-                />,
-                document.body
-            )}
             <nav id="navbox">
                 <ul className="firstul">
                     <NavLink
@@ -84,12 +68,12 @@ export default function Nav() {
                         type="button"
                         className="navbtnT"
                         id="langSet"
-                        onClick={() => setSmodalVisible(true)}
+                        onClick={ () => setSmodalVisible(true)}
                     >
                         {t("languages")}
                     </button>
 
-                    <ButtonFeed />
+                    <ButtonFeeder />
 
                     <NavLink
                         className="navbtnT"
@@ -100,6 +84,10 @@ export default function Nav() {
                     </NavLink>
                 </ul>
             </nav>
+            {smodalVisible && createPortal(
+                <Smodal />,
+                document.body
+            )}
         </>
     );
 }

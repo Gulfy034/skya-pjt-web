@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 
 import "@styles/skya_introduci_04.scss";
 

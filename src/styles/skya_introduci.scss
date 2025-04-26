@@ -1,3 +1,4 @@
+@use "shared/colors" as colors;
 @use "shared/animation";
 
 .container {
@@ -5,13 +6,18 @@
     display: grid;
     text-align: Left;
     white-space: break-spaces;
-    border: 2px dashed #dcdbdb;
-    color: #f3f3f3;
-    margin: 24% 15% 0;
+    border: 2px dashed colors.$baba;
+    color: colors.$baba;
+    margin: 5% 15% 0;
     border-radius: 1rem;
     line-height: 1.5rem;
-    background-color: #2bad1a14;
-    //scroll-snap-type: y mandatory;
+    background-color: colors.$global-hover;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    section {
+        scroll-snap-align: start;
+    }
 
     h1,
     h2,
@@ -23,11 +29,11 @@
 
     h4 {
         padding-left: 4%;
-        font-family: "PixeloidSans-Regular", "fusion-pixel-Monospace";
+        font: clamp(1rem, 4vw, 1.2rem) "PixeloidSans-Regular", "fusion-pixel-Monospace";
     }
 
     p {
-        font: clamp(1rem, 4vw, 1.1rem) "fusion-pixel-Monospace";
+        font: clamp(0.7rem, 4vw, 1rem) "fusion-pixel-Monospace";
         padding: 4.5%;
     }
 
@@ -41,16 +47,16 @@
 }
 
 hr.hr_conf {
-    color: #2bad1a;
+    color: colors.$highlight-color;
     text-align: center;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-color: #2bad1a;
+    border-color: colors.$highlight-color;
     font-size: clamp(0.75rem, 4vw, 1rem);
     padding: 1em 0;
     position: relative;
-    font-family: "PublicPixel", "Consolas", "fusion-pixel-Monospace";
+    font-family: "PublicPixel", "fusion-pixel-Monospace";
 
     &::before {
         content: attr(attr-con);

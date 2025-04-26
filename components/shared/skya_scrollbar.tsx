@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 
-import "@styles/skya_scrollbar.scss";
+import "@styles/shared/_scrollbar.scss";
 
 const ScrollProgress = () => {
     const [progress, setProgress] = useState(0);

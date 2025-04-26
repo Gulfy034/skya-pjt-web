@@ -1,8 +1,6 @@
+@use "shared/colors" as colors;
 @use "shared/layers" as layers;
-@use "shared/fonts";
-@use "shared/animation";
 
-@use "skya_loading";
 body {
     grid-template-areas:
         "header"
@@ -13,16 +11,16 @@ body {
 header {
     grid-area: header;
     row-gap: 35px;
-    color: #bababa;
+    color: colors.$baba;
 
     #background {
-        animation: bg_ani 2s infinite;
+        animation: bgAni 2s infinite;
         z-index: layers.$background;
     }
 
     .skyaTitle {
         .errTitleText {
-            animation: bg_ani 1s infinite;
+            animation: bgAni 1s infinite;
         }
     }
 
@@ -31,7 +29,7 @@ header {
         font: 2.5rem "PixeloidSans-Regular", "fusion-pixel-Monospace";
         margin: 3rem auto;
         font-size: clamp(2.5rem, 2vw, 3rem);
-        color: #2bad1a;
+        color: colors.$highlight-color;
         //animation: bg_ani 2s infinite;
     }
 
@@ -41,18 +39,19 @@ main {
     grid-area: content;
 
     .skyaBtnE {
-        animation: bg_ani 2s infinite;
+        animation: bgAni 2s infinite;
     }
 
     span {
         text-align: left;
         font: 600 1rem "SKYA_Title-pixel_demo";
-        color: #2bad1a;
+        color: colors.$highlight-color;
     }
 
     .output {
-        font: 1rem "PixeloidSans-Regular", "Consolas", "Cascadia", "fusion-pixel-Monospace";
-        color: #2bad1a57;
+        font: 1rem "PixeloidSans-Regular", "fusion-pixel-Monospace";
+        color: colors.$highlight-color;
+        opacity: 0.65;
     }
 }
 

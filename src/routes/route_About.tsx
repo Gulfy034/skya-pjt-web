@@ -1,3 +1,6 @@
+
+// TODO: make this part
+
 export default function AboutPage() {
 
   return (
