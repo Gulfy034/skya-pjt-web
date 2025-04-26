@@ -4,7 +4,7 @@
     DO NOT PUSH THIS UNLESS IT WORKS !!!
 */
 
-import { Feed } from 'feed';
+/* import { Feed } from 'feed';
 
    export async function onRequestGet(context: { request: { url: any; }; }) {
      // 1. Get the data (from API or KV)
@@ -45,4 +45,4 @@ import { Feed } from 'feed';
          'Cache-Control': 'public, max-age=3600' // optional
        }
      });
-   }
+   } */
