@@ -8,9 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "cf-typegen": "wrangler types",
-    "deploy": "npm run build && wrangler deploy"
+    "test": "vitest"
   },
   "dependencies": {
     "@react-three/a11y": "^3.0.0",
