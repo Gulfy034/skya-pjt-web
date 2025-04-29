@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import { Trans, useTranslation } from "react-i18next";
 
 import "@styles/skya_footer.scss";

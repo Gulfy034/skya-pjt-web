@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import { ReactLenis } from "lenis/react";
 
 import IndexPage from "./routes/route_Index";
@@ -41,8 +41,7 @@ ReactDOM.createRoot(document.querySelector("#layout")!).render(
     <ReactLenis
       options={{
         syncTouch: true,
-        duration: 1,
-        easing: (t) => Math.pow(2, -15 * t) * Math.sin((t * 8 - 0.5) * (1.75 * Math.PI) / 1.5) + 1,
+        duration: 0.5
       }}
       root>
       <ModalProvider>
