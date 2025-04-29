@@ -1,7 +1,9 @@
 @use "colors" as colors;
+@use "animation";
 
 body {
     background: radial-gradient(ellipse at top,
-            colors.$global-color 0%, #111 100%) fixed;
+            colors.$global-color 0%, colors.$dark 100%) fixed;
     background-size: cover;
+    //animation: bgRotate 5s ease-in-out infinite;
 }

@@ -2,7 +2,25 @@
 @use "shared/colors" as colors;
 
 #loading{
+    position: absolute;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
     background-color: colors.$dark-shadow2;
     z-index: layers.$common;
-    font: auto "consolas" "fusion-pixel-Monospace";
+    font: 4vh "XTypeWriter-Bold","fusion-pixel-Monospace";
+    color: colors.$sharp-green;
+
+    &::before{
+        content: "~#";
+    }
+
+    &::after{
+        content: "";
+        color: colors.$sharp-green;
+        animation: loading 400ms ease-out infinite;
+    }
 }

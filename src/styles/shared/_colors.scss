@@ -2,7 +2,7 @@
 purely, they are variables.
 usage:
 1. @use "shared/colors" as colors
-2. colors.$something
+2. colors.$someVariable
 */
 
 $global-color: #142857;
@@ -12,8 +12,8 @@ $info-color: #281457;
 
 $global-hover: #14285714;
 
-$dark: #333;
-$dark-backdrop: #00000030;
+$dark: #111;
+$dark-backdrop: #05021946;
 $dark-shadow1: #00000033;
 $dark-shadow2: #00000036;
 

@@ -1,0 +1,59 @@
+@use "shared/colors" as colors;
+@use "shared/layers" as layers;
+@use "shared/animation";
+
+.ReactModalPortal {
+    position: fixed;
+    z-index: layers.$modals;
+}
+
+.modalBox {
+    position: fixed;
+    display: grid;
+    top: 10vh;
+    left: 25%;
+    width: 50vw;
+    height: 50vh;
+    padding: 30px 30px;
+    z-index: layers.$modals;
+    overflow: hidden;
+    border: 5px solid colors.$highlight-color;
+    border-radius: 8px;
+    transform-origin: center center;
+    animation: modalIn 200ms forwards;
+
+    &.ReactModal__Content--after-open {
+        background: colors.$dark-backdrop;
+    }
+
+    &.ReactModal__Content--before-close {
+        animation: modalOut 200ms forwards;
+    }
+
+    &:active {
+        border-style: dashed;
+    }
+
+    &:hover {
+        border-color: colors.$highlight-color;
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    &.ReactModal__Overlay--after-open {
+        opacity: 1;
+        background: colors.$dark-backdrop;
+    }
+
+    &.ReactModal__Overlay--before-close {
+        opacity: 0;
+        animation: modalOut 200ms forwards;
+    }
+}

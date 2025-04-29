@@ -15,6 +15,11 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 
+    &::backdrop{
+        background-color: colors.$global-hover;
+        filter: blur(10px);
+    }
+
     section {
         scroll-snap-align: start;
     }
@@ -38,11 +43,11 @@
     }
 
     &:hover {
-        animation: elementsHoverOne 0.35s forwards;
+        animation: elementsHoverOne 350ms forwards;
     }
 
     &:not(:hover) {
-        animation: elementsOutHoverOne 0.35s forwards;
+        animation: elementsOutHoverOne 350ms forwards;
     }
 }
 

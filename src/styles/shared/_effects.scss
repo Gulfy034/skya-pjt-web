@@ -1,0 +1,5 @@
+@use "colors" as colors;
+
+p {
+    z-index: layers.$elements;
+}

@@ -1,6 +1,0 @@
-@use "colors" as colors;
-
-::selection{
-    background-color: colors.$highlight-color;
-    color: colors.$link-visited;
-}

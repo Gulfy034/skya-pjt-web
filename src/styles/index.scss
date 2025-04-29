@@ -1,7 +1,6 @@
 @use "shared/background";
 @use "shared/fonts";
 @use "shared/icons";
-@use "shared/styled";
 @use "shared/cursors" as cursors;
 @use "shared/colors" as colors;
 @use "shared/animation";
@@ -18,6 +17,11 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+
+    ::selection {
+        background-color: colors.$highlight-color;
+        color: colors.$link-visited;
+    }
 
     a {
 
@@ -38,7 +42,7 @@
             outline: 5px solid colors.$section-color;
         }
 
-        &:not(:focus){
+        &:not(:focus) {
             outline: 0 solid colors.$section-color;
         }
     }
@@ -75,14 +79,14 @@ footer {
     grid-area: footer;
 
     &:hover {
-        animation: elementsHoverOne 0.35s forwards;
+        animation: elementsHoverOne 350ms forwards;
     }
 
     &:not(:hover) {
-        animation: elementsOutHoverOne 0.35s forwards;
+        animation: elementsOutHoverOne 350ms forwards;
     }
 
     &:active {
-        animation: elementsClick 0.35s forwards;
+        animation: elementsClick 350ms forwards;
     }
 }

@@ -2,11 +2,10 @@
 @use "colors" as colors;
 @use "cursors" as cursors;
 
-.skyaBtnD,
-.skyaBtnE {
+.skyaBtn {
     color: colors.$highlight-color;
     font: 20px "XTypeWriter-Bold", "fusion-pixel-Monospace";
-    background-color: colors.$global-color;
+    background-color: colors.$dark-backdrop;
     border: 3px solid;
     margin: 7% auto 10%;
     border-radius: 4px;
@@ -20,14 +19,14 @@
 
     &:hover {
         cursor: cursors.$pointer;
-        animation: btn_inHover 0.5s forwards;
+        animation: btn_inHover 500ms forwards;
     }
 
     &:not(:hover) {
-        animation: btn_outHover 0.4s forwards;
+        animation: btn_outHover 400ms forwards;
     }
 
     &:active {
-        animation: btn_Click 0.4s forwards;
+        animation: btn_Click 400ms forwards;
     }
 }

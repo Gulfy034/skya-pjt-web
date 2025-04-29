@@ -1,15 +1,16 @@
-import { useState } from "react";
-import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 //import { isMobile } from "react-device-detect";
 
-//import { buttonSfx } from "@components/shared/skya_playsfx";
-import "@components/shared/skya_languageSet";
-import Smodal from "@components/shared/skya_floatwindow";
 import ButtonFeeder from "@components/skya_feed";
 
+//import { buttonSfx } from "@components/shared/skya_playsfx";
+import { Modal } from "@components/shared/skya_modal";
+
 import "@styles/skya_nav.scss";
+import "@styles/skya_modal.scss";
+import { useModal } from "@hooks/useModal";
+
 //TODO: mobile detect => change this appearence.
 //TODO: test router buttons should be removed.
 
@@ -25,7 +26,7 @@ const RenderMobile = () => {
 
 export default function Nav() {
     const { t } = useTranslation(["nav"]);
-    const [smodalVisible, setSmodalVisible] = useState(false);
+    const { openModal } = useModal();
     return (
         <>
             <nav id="navbox">
@@ -68,7 +69,7 @@ export default function Nav() {
                         type="button"
                         className="navbtnT"
                         id="langSet"
-                        onClick={ () => setSmodalVisible(true)}
+                        onClick={() => openModal()}
                     >
                         {t("languages")}
                     </button>
@@ -84,10 +85,7 @@ export default function Nav() {
                     </NavLink>
                 </ul>
             </nav>
-            {smodalVisible && createPortal(
-                <Smodal />,
-                document.body
-            )}
+            <Modal />
         </>
     );
 }

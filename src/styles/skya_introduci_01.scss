@@ -12,16 +12,16 @@ code#spanOne {
     &:hover {
         border-color: colors.$highlight-color;
         color: colors.$highlight-color;
-        animation: elementsHoverOne 0.2s forwards;
+        animation: elementsHoverOne 200ms forwards;
     }
 
     &:not(:hover) {
-        animation: elementsOutHoverOne 0.5s forwards;
+        animation: elementsOutHoverOne 500ms forwards;
     }
 
     &:active {
         border-color: colors.$baba;
         color: colors.$baba;
-        animation: elementsClick 0.25s forwards;
+        animation: elementsClick 250ms forwards;
     }
 }

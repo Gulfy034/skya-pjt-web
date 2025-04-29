@@ -1,0 +1,4 @@
+/*
+    Access-Control-Allow-Origin: https://skya-project.wensite https://static.cloudflareinsights.com
+    Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+    Access-Control-Allow-Headers: Contnt-Type, Authorization

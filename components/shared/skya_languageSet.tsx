@@ -11,7 +11,7 @@ export default i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        debug: true,
+        //debug: true,
         fallbackLng: "en",
         ns: ["loading", "home"],
         defaultNS: "loading",

@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import Lenis from "lenis";
+// import { useEffect, useRef, useState } from "react";
+// import Lenis from "lenis";
 
 import "@styles/shared/_scrollbar.scss";
 
-export function ScrollProgress() {
+// TODO: useScroll custom hook
+
+/*
+export default function ScrollProgress() {
     const [progress, setProgress] = useState(0);
     const lenisRef = useRef<Lenis>(null);
     const rafHandle = useRef<number>(0);
@@ -44,11 +47,8 @@ export function ScrollProgress() {
         }
     }, [])
 
-    return progress;
+    return (
+        <div id="scrollProgress" style={{ height: `${progress}%` }} />
+    )
 }
-
-// TODO: scrollbar styling
-
-/* export function ScrollBar() {
-
-} */
+*/

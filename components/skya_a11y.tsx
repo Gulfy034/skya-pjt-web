@@ -9,7 +9,7 @@ import "@styles/skya_a11y.scss";
 components required
 */
 
-export function accessbility({ content }:any) {
+export function Accessbility({ content }: { content: React.ReactNode }) {
     return (
         <div id="a11y" className="a11y">
             {content}

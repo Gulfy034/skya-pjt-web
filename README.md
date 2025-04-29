@@ -24,11 +24,12 @@ the skya-project game website's frontend-part repository now is PUBLIC !
 - ./public
   - fonts (opensource fonts with license files)
   - imgs (svg or png)
-  - locates (translation files)
+  - locates (translation files, **!symbolic! zh -> zh_CN as default**)
   - models (gltf models for threejs)
   - sfx (sound effects)
 
 - ./functions (cloudflare pages functions)
+- ./worker (cloudflare workers)
 
 ## Build and Run
 

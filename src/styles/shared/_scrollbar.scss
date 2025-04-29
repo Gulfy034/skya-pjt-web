@@ -5,7 +5,6 @@
 $currentScrollbarWidth: 8px;
 $currentScrollbarHeight: 1vh;
 
-
 /* full scrollbar */
 ::-webkit-scrollbar {
     display: none;
@@ -21,12 +20,12 @@ div#scrollProgress{
     color: colors.$highlight-color;
     z-index: layers.$elements;
     margin: 0 auto;
-    width: 80%;
     height: 6px;
     display: block;
     border: 1px colors.$highlight-color solid;
     border-radius: 0 0 3px 3px;
     background-color: colors.$highlight-color;
+    transition: none;
 
     &::before{
         animation: elementsAppear forwards 200ms;
