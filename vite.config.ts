@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { resolve } from "path";
@@ -24,6 +26,16 @@ export default defineConfig({
         replacement: resolve(__dirname, "tests"),
       }
     ],
+  },
+  test: {
+    workspace: ["./vitest.config.ts"],
+    browser: {
+      enabled: true,
+      provider: "playwright",
+      instances: [
+        { browser: "chromium" },
+      ],
+    },
   },
   assetsInclude: ["**/*.gltf", "**/*.blender"],
 })
