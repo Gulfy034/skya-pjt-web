@@ -28,7 +28,22 @@ export default defineConfig({
     ],
   },
   test: {
-    workspace: ["./vitest.config.ts"],
+    workspace: [
+      {
+        test: {
+          name: "dbgTest",
+          root: "./tests",
+          setupFiles: "./debugging.base.test.ts"
+        }
+      },
+      {
+        test: {
+          name: "modalTest",
+          root: "./tests",
+          setupFiles: "./modal.test.ts"
+        }
+      }
+    ],
     browser: {
       enabled: true,
       provider: "playwright",
