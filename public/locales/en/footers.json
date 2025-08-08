@@ -1,8 +1,8 @@
 {
     "common": {
         "part1": "'SKYA_PROJECT' and 'SKYA_PROJECT_DEMO' are in development, the opensource DEMO version client's source codes were licensed under the GPLv3 License.",
-        "part2": "This web page's hosted by <CloudflareLink>Cloudflare/CloudflareLink>",
-        "part3": "This website's sourcecode is on <GithubLinkOne>Github</GithubLinkOne>"
+        "part2": "This web page's hosted by <CloudflareLink>Cloudflare Pages</CloudflareLink>",
+        "part3": "This website's sourcecode is on <GithubLink>Github</GithubLink>"
     },
     "auguroz": {
         "random1": "<span>~#</span> there is nothing but there is another way to access this page!",
