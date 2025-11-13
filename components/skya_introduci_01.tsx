@@ -4,7 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 import "@styles/skya_introduci_01.scss";
 
 
-//TODO: i18n localize
+//TODO: i18n localize, use <summary></summary>
 export default function IntrOne() {
     const { t } = useTranslation(["contents"]);
     return (

@@ -9,15 +9,24 @@ import "@styles/skya_modal.scss";
 
 /*
 TODO:
-animate the modal window.
-call lenis background stop() while opening, and start() while closing
+
+1. call lenis background stop() while opening, and start() while closing
+
+2. add loading animation
+
+3. separate different modal roles
+
 */
 
+// javascript:history.back();
+
+
 function ModalUtils() {
+    let modalContent;
     return (
         <>
             <ModalTitle />
-            <p id="modalTexts"></p>
+            <p id="modalTexts">{modalContent}</p>
         </>
     )
 }
