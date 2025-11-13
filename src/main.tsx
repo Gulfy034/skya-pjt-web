@@ -9,6 +9,10 @@ import AboutPage from "./routes/route_About";
 import ContectPage from "./routes/route_Contect";
 import Error404Page from "./routes/route_404";
 
+import CharactersPage from "./routes/characters/route_characterList";
+import DevlogPage from "./routes/devlogs/route_devlogMain";
+import DevlogDemoPage from "./routes/devlogs/route_devDemo";
+
 import "@components/shared/skya_languageSet";
 import ModalProvider from "@components/shared/skya_modal";
 
@@ -30,6 +34,18 @@ const root = createBrowserRouter([
       {
         path: "/Contect",
         element: <ContectPage />,
+      },
+      {
+        path: "/Characters",
+        element: <CharactersPage/>,
+      },
+      {
+        path: "/devlogs",
+        element: <DevlogPage/>,
+      },
+      {
+        path: "/devlogs/demo",
+        element: <DevlogDemoPage/>,
       }
     ]
   },
