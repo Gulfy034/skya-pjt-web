@@ -5,5 +5,10 @@
     "main": {
         "part1": "output:",
         "part2": "~# can't found any pages matches you have typed !"
+    },
+    "consolelog": {
+        "404": "%c We don't have anything you have requested!",
+        "403": "%c We forbiddened of your request, too BAD!",
+        "302": "%c We are redirecting for you to the new address, behold!"
     }
 }
