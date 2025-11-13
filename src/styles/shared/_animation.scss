@@ -1,5 +1,7 @@
 @use "colors" as colors;
 
+// TODO: animation redaction needed
+
 /*
 these are ease-functions & animations defination
 some ease-funstions you can find in https://easing.net
@@ -109,7 +111,7 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 
 @keyframes elementsHoverOne {
     0% {
-        opacity: 0.65;
+        opacity: 0.8;
         filter: grayscale(0.75);
     }
 
@@ -140,8 +142,8 @@ $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     100% {
-        opacity: 0.65;
-        filter: grayscale(0.5);
+        opacity: 0.8;
+        filter: grayscale(0.75);
     }
 }
 

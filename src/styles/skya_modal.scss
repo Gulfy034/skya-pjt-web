@@ -8,12 +8,10 @@
 }
 
 .modalBox {
-    position: fixed;
     display: grid;
-    top: 10vh;
-    left: 25%;
-    width: 50vw;
-    height: 50vh;
+    height: 60vh;
+    width: 60vw;
+    margin: 10vh 20vw 10vh;
     padding: 30px 30px;
     z-index: layers.$modals;
     overflow: hidden;
@@ -56,4 +54,8 @@
         opacity: 0;
         animation: modalOut 200ms forwards;
     }
+}
+
+.modalFrame{
+    opacity: 1;
 }
