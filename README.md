@@ -47,6 +47,8 @@ the skya-project game website's frontend-part repository now is PUBLIC !
 
 2. do not use deno (another node package solution) because there's a issue of using SWC instead of babel.
 
+3. Very unstable now, please do not as a learning example.
+
 ## License
 
 1. The website codes(including html files, style files, components files, translation files) **don't have License**. And because of that, **no modify-and-republish or copy-and-republish without author's permission**, and also **not in commercial use**. You can clone this repository and run locally, create a issue or a discussion of this website repository.
