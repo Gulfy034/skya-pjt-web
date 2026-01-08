@@ -9,8 +9,24 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+      
+    target-branch: "dependabot-bun"
+    commit-message:
+      prefix: "[Dependency-bun]: "
+    labels:
+      - "bun"
+      - "dependabot"
+      - "dependencies"
 
   - package-ecosystem: "npm" # npm
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+      
+    commit-message:
+      prefix: "[Dependency-npm]: "
+    target-branch: "dependabot-npm"
+    labels:
+      - "npm"
+      - "dependabot"
+      - "dependencies"
